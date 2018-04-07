@@ -12,7 +12,7 @@ package org.mockito.internal.util.collections;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.mockito.internal.util.collections.Sets.newSet;
 
 public class LmartiniSetTest {
 
@@ -21,7 +21,7 @@ public class LmartiniSetTest {
 	*/
     @Test(expected = IllegalArgumentException.class)
     public void checkNewSetException() throws Exception {
-        Set<Integer> badSet = new Set<Integer>(null);
+        newSet(null);
     }
 
 }
