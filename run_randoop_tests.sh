@@ -1,1 +1,1 @@
-java -classpath "./randoop-4.0.1/randoop-all-4.0.1.jar:./build/classes/java/main/" randoop.main.Main gentests --classlist=myclasses_util.txt --time-limit=300 --log=randoop_log.txt --usethreads=true --progressintervalmillis=10000 >> randoop_output_wlog.txt
+javac -classpath .:./junit-4.12.jar:./hamcrest-core.jar ErrorTest*.java RegressionTest*.java -sourcepath ./build/classes/java/main/
