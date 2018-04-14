@@ -169,7 +169,7 @@ public class RegressionTest0 {
         cleanerEnumWeakConcurrentMapArray53[5] = cleanerEnumWeakConcurrentMap50;
         try {
             org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>[] cleanerEnumWeakConcurrentMapArray66 = weakConcurrentMap28.toArray(cleanerEnumWeakConcurrentMapArray53);
-            org.junit.Assert.fail("Expected exception of type java.lang.ArrayStoreException; message: java.lang.Float");
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayStoreException; message: java.lang.Short");
         } catch (java.lang.ArrayStoreException e) {
         }
         org.junit.Assert.assertTrue("'" + cleaner23 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE + "'", cleaner23.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE));
@@ -1638,6 +1638,41 @@ public class RegressionTest0 {
         java.lang.Object obj6 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner4);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner7 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD;
         java.lang.Object obj8 = cleanerEnumWeakConcurrentMap1.remove((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner7);
+        int int9 = cleanerEnumWeakConcurrentMap1.approximateSize();
+        java.lang.Thread thread10 = cleanerEnumWeakConcurrentMap1.getCleanerThread();
+        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap12 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
+        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner13 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
+        java.lang.Object obj14 = cleanerEnumWeakConcurrentMap12.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner13);
+        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner15 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
+        java.lang.Object obj16 = cleanerEnumWeakConcurrentMap12.remove((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner15);
+        boolean boolean17 = cleanerEnumWeakConcurrentMap1.containsKey((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner15);
+        java.lang.ref.Reference<? extends java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>> wildcardReference18 = cleanerEnumWeakConcurrentMap1.poll();
+        org.junit.Assert.assertTrue("'" + cleaner4 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE + "'", cleaner4.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE));
+        org.junit.Assert.assertNull(obj5);
+        org.junit.Assert.assertNull(obj6);
+        org.junit.Assert.assertTrue("'" + cleaner7 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD + "'", cleaner7.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD));
+        org.junit.Assert.assertNull(obj8);
+        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 0 + "'", int9 == 0);
+        org.junit.Assert.assertNull(thread10);
+        org.junit.Assert.assertTrue("'" + cleaner13 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE + "'", cleaner13.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE));
+        org.junit.Assert.assertNull(obj14);
+        org.junit.Assert.assertTrue("'" + cleaner15 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE + "'", cleaner15.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE));
+        org.junit.Assert.assertNull(obj16);
+        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
+        org.junit.Assert.assertNull(wildcardReference18);
+    }
+
+    @Test
+    public void test094() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test094");
+        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
+        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
+        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
+        java.lang.Object obj5 = cleanerEnumWeakConcurrentMap3.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner4);
+        java.lang.Object obj6 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner4);
+        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner7 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD;
+        java.lang.Object obj8 = cleanerEnumWeakConcurrentMap1.remove((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner7);
         org.mockito.internal.util.concurrent.DetachedThreadLocal<org.mockito.mock.MockName> mockNameDetachedThreadLocal9 = new org.mockito.internal.util.concurrent.DetachedThreadLocal<org.mockito.mock.MockName>(cleaner7);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Thread, org.mockito.mock.MockName> threadWeakConcurrentMap10 = mockNameDetachedThreadLocal9.getBackingMap();
         org.mockito.internal.util.MockNameImpl mockNameImpl12 = new org.mockito.internal.util.MockNameImpl("");
@@ -1660,9 +1695,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test094() throws Throwable {
+    public void test095() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test094");
+            System.out.format("%n%s%n", "RegressionTest0.test095");
         java.lang.reflect.Field field0 = null;
         org.mockito.internal.util.MockNameImpl mockNameImpl2 = new org.mockito.internal.util.MockNameImpl("");
         java.lang.String str3 = mockNameImpl2.toString();
@@ -1677,9 +1712,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test095() throws Throwable {
+    public void test096() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test095");
+            System.out.format("%n%s%n", "RegressionTest0.test096");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = org.mockito.internal.util.Checks.checkItemsNotNull(weakConcurrentMap0, "hi!");
         try {
@@ -1691,9 +1726,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test096() throws Throwable {
+    public void test097() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test096");
+            System.out.format("%n%s%n", "RegressionTest0.test097");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         boolean boolean3 = weakConcurrentMap0.contains((java.lang.Object) (byte) 1);
@@ -1746,9 +1781,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test097() throws Throwable {
+    public void test098() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test097");
+            System.out.format("%n%s%n", "RegressionTest0.test098");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -1779,9 +1814,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test098() throws Throwable {
+    public void test099() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test098");
+            System.out.format("%n%s%n", "RegressionTest0.test099");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable3 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap1, "");
@@ -1864,9 +1899,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test099() throws Throwable {
+    public void test100() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test099");
+            System.out.format("%n%s%n", "RegressionTest0.test100");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = org.mockito.internal.util.Checks.checkItemsNotNull(weakConcurrentMap0, "hi!");
         int int3 = weakConcurrentMap2.size();
@@ -1882,9 +1917,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test100() throws Throwable {
+    public void test101() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test100");
+            System.out.format("%n%s%n", "RegressionTest0.test101");
         java.lang.reflect.Field field0 = null;
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable3 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap1, "");
@@ -1907,9 +1942,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test101() throws Throwable {
+    public void test102() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test101");
+            System.out.format("%n%s%n", "RegressionTest0.test102");
         java.lang.reflect.Field field0 = null;
         org.mockito.internal.util.io.IOUtil iOUtil1 = new org.mockito.internal.util.io.IOUtil();
         org.mockito.internal.util.io.IOUtil iOUtil4 = org.mockito.internal.util.Checks.checkNotNull(iOUtil1, "hi!", "hi!");
@@ -1923,9 +1958,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test102() throws Throwable {
+    public void test103() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test102");
+            System.out.format("%n%s%n", "RegressionTest0.test103");
         java.io.File file1 = null;
         try {
             org.mockito.internal.util.io.IOUtil.writeText("", file1);
@@ -1935,9 +1970,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test103() throws Throwable {
+    public void test104() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test103");
+            System.out.format("%n%s%n", "RegressionTest0.test104");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = org.mockito.internal.util.Checks.checkItemsNotNull(weakConcurrentMap0, "hi!");
         int int3 = weakConcurrentMap2.size();
@@ -1953,9 +1988,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test104() throws Throwable {
+    public void test105() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test104");
+            System.out.format("%n%s%n", "RegressionTest0.test105");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) ' ');
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails4 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails1, "", "hi!");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails6 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails4, "hi!");
@@ -1970,9 +2005,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test105() throws Throwable {
+    public void test106() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test105");
+            System.out.format("%n%s%n", "RegressionTest0.test106");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -2012,9 +2047,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test106() throws Throwable {
+    public void test107() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test106");
+            System.out.format("%n%s%n", "RegressionTest0.test107");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) ' ');
         try {
             java.lang.String str2 = defaultMockingDetails1.printInvocations();
@@ -2024,9 +2059,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test107() throws Throwable {
+    public void test108() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test107");
+            System.out.format("%n%s%n", "RegressionTest0.test108");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable2 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap0, "");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -2048,9 +2083,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test108() throws Throwable {
+    public void test109() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test108");
+            System.out.format("%n%s%n", "RegressionTest0.test109");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         try {
@@ -2062,9 +2097,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test109() throws Throwable {
+    public void test110() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test109");
+            System.out.format("%n%s%n", "RegressionTest0.test110");
         java.lang.Object obj0 = null;
         try {
             org.mockito.internal.util.MockUtil.maybeRedefineMockName(obj0, "");
@@ -2074,9 +2109,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test110() throws Throwable {
+    public void test111() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test110");
+            System.out.format("%n%s%n", "RegressionTest0.test111");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -2098,9 +2133,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test111() throws Throwable {
+    public void test112() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test111");
+            System.out.format("%n%s%n", "RegressionTest0.test112");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         try {
             org.mockito.internal.util.MockUtil.maybeRedefineMockName((java.lang.Object) false, "<[]>");
@@ -2110,9 +2145,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test112() throws Throwable {
+    public void test113() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test112");
+            System.out.format("%n%s%n", "RegressionTest0.test113");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -2137,9 +2172,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test113() throws Throwable {
+    public void test114() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test113");
+            System.out.format("%n%s%n", "RegressionTest0.test114");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool2 = new org.mockito.internal.util.reflection.LenientCopyTool();
@@ -2176,9 +2211,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test114() throws Throwable {
+    public void test115() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test114");
+            System.out.format("%n%s%n", "RegressionTest0.test115");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool1 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable4 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap2, "");
@@ -2266,9 +2301,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test115() throws Throwable {
+    public void test116() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test115");
+            System.out.format("%n%s%n", "RegressionTest0.test116");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         boolean boolean3 = weakConcurrentMap0.contains((java.lang.Object) (byte) 1);
@@ -2282,9 +2317,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test116() throws Throwable {
+    public void test117() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test116");
+            System.out.format("%n%s%n", "RegressionTest0.test117");
         java.lang.reflect.WildcardType wildcardType0 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
         org.mockito.internal.util.reflection.GenericMetadataSupport.BoundedType boundedType4 = org.mockito.internal.util.Checks.checkNotNull((org.mockito.internal.util.reflection.GenericMetadataSupport.BoundedType) wildCardBoundedType1, "hi!", "");
@@ -2297,9 +2332,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test117() throws Throwable {
+    public void test118() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test117");
+            System.out.format("%n%s%n", "RegressionTest0.test118");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         java.lang.reflect.WildcardType wildcardType1 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType2 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType1);
@@ -2320,9 +2355,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test118() throws Throwable {
+    public void test119() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test118");
+            System.out.format("%n%s%n", "RegressionTest0.test119");
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner0 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD;
         java.lang.reflect.Field field1 = null;
         org.mockito.internal.util.ConsoleMockitoLogger consoleMockitoLogger2 = new org.mockito.internal.util.ConsoleMockitoLogger();
@@ -2339,9 +2374,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test119() throws Throwable {
+    public void test120() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test119");
+            System.out.format("%n%s%n", "RegressionTest0.test120");
         java.lang.reflect.Field field1 = null;
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor3 = weakConcurrentMap2.iterator();
@@ -2367,16 +2402,16 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test120() throws Throwable {
+    public void test121() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test120");
+            System.out.format("%n%s%n", "RegressionTest0.test121");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<org.mockito.internal.util.MockNameImpl, java.lang.reflect.GenericDeclaration[]> mockNameImplWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<org.mockito.internal.util.MockNameImpl, java.lang.reflect.GenericDeclaration[]>(true);
     }
 
     @Test
-    public void test121() throws Throwable {
+    public void test122() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test121");
+            System.out.format("%n%s%n", "RegressionTest0.test122");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray2 = new org.mockito.internal.util.reflection.InstanceField[] {};
@@ -2417,16 +2452,16 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test122() throws Throwable {
+    public void test123() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test122");
+            System.out.format("%n%s%n", "RegressionTest0.test123");
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.lang.Class<?>, java.lang.Cloneable> wildcardClassWithInlinedExpunction0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.lang.Class<?>, java.lang.Cloneable>();
     }
 
     @Test
-    public void test123() throws Throwable {
+    public void test124() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test123");
+            System.out.format("%n%s%n", "RegressionTest0.test124");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool1 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable4 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap2, "");
@@ -2526,9 +2561,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test124() throws Throwable {
+    public void test125() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test124");
+            System.out.format("%n%s%n", "RegressionTest0.test125");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -2550,9 +2585,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test125() throws Throwable {
+    public void test126() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test125");
+            System.out.format("%n%s%n", "RegressionTest0.test126");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -2566,9 +2601,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test126() throws Throwable {
+    public void test127() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test126");
+            System.out.format("%n%s%n", "RegressionTest0.test127");
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner23 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object[] objArray24 = new java.lang.Object[] { (short) 10, (byte) 100, 1.0d, 1, (-1.0f), 10.0f, (byte) 1, 1, 10.0f, (-1.0d), (short) -1, "hi!", 1.0d, (byte) 1, 1.0f, (short) -1, 10, 10L, false, (byte) -1, (-1L), false, (-1), cleaner23 };
         java.util.LinkedHashSet<java.lang.Object> objSet25 = new java.util.LinkedHashSet<java.lang.Object>();
@@ -2600,9 +2635,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test127() throws Throwable {
+    public void test128() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test127");
+            System.out.format("%n%s%n", "RegressionTest0.test128");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -2616,9 +2651,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test128() throws Throwable {
+    public void test129() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test128");
+            System.out.format("%n%s%n", "RegressionTest0.test129");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -2658,9 +2693,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test129() throws Throwable {
+    public void test130() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test129");
+            System.out.format("%n%s%n", "RegressionTest0.test130");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -2704,9 +2739,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test130() throws Throwable {
+    public void test131() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test130");
+            System.out.format("%n%s%n", "RegressionTest0.test131");
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner23 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object[] objArray24 = new java.lang.Object[] { (short) 10, (byte) 100, 1.0d, 1, (-1.0f), 10.0f, (byte) 1, 1, 10.0f, (-1.0d), (short) -1, "hi!", 1.0d, (byte) 1, 1.0f, (short) -1, 10, 10L, false, (byte) -1, (-1L), false, (-1), cleaner23 };
         java.util.LinkedHashSet<java.lang.Object> objSet25 = new java.util.LinkedHashSet<java.lang.Object>();
@@ -2733,9 +2768,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test131() throws Throwable {
+    public void test132() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test131");
+            System.out.format("%n%s%n", "RegressionTest0.test132");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) ' ');
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails4 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails1, "", "hi!");
         try {
@@ -2747,9 +2782,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test132() throws Throwable {
+    public void test133() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test132");
+            System.out.format("%n%s%n", "RegressionTest0.test133");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) ' ');
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails4 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails1, "", "hi!");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails6 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails4, "hi!");
@@ -2763,9 +2798,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test133() throws Throwable {
+    public void test134() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test133");
+            System.out.format("%n%s%n", "RegressionTest0.test134");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -2787,9 +2822,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test134() throws Throwable {
+    public void test135() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test134");
+            System.out.format("%n%s%n", "RegressionTest0.test135");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         boolean boolean3 = weakConcurrentMap0.contains((java.lang.Object) (byte) 1);
@@ -2842,9 +2877,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test135() throws Throwable {
+    public void test136() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test135");
+            System.out.format("%n%s%n", "RegressionTest0.test136");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray2 = new org.mockito.internal.util.reflection.InstanceField[] {};
@@ -2866,9 +2901,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test136() throws Throwable {
+    public void test137() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test136");
+            System.out.format("%n%s%n", "RegressionTest0.test137");
         org.mockito.internal.util.reflection.FieldCopier fieldCopier0 = new org.mockito.internal.util.reflection.FieldCopier();
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -2894,9 +2929,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test137() throws Throwable {
+    public void test138() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test137");
+            System.out.format("%n%s%n", "RegressionTest0.test138");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -2930,9 +2965,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test138() throws Throwable {
+    public void test139() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test138");
+            System.out.format("%n%s%n", "RegressionTest0.test139");
         java.lang.reflect.WildcardType wildcardType0 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
         org.mockito.internal.util.reflection.GenericMetadataSupport.BoundedType boundedType4 = org.mockito.internal.util.Checks.checkNotNull((org.mockito.internal.util.reflection.GenericMetadataSupport.BoundedType) wildCardBoundedType1, "hi!", "");
@@ -2945,9 +2980,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test139() throws Throwable {
+    public void test140() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test139");
+            System.out.format("%n%s%n", "RegressionTest0.test140");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable2 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap0, "");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -2973,17 +3008,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test140() throws Throwable {
+    public void test141() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test140");
+            System.out.format("%n%s%n", "RegressionTest0.test141");
         java.lang.String str1 = org.mockito.internal.util.StringUtil.removeFirstLine("<[]>");
         org.junit.Assert.assertTrue("'" + str1 + "' != '" + "<[]>" + "'", str1.equals("<[]>"));
     }
 
     @Test
-    public void test141() throws Throwable {
+    public void test142() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test141");
+            System.out.format("%n%s%n", "RegressionTest0.test142");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable2 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap0, "");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -3021,16 +3056,16 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test142() throws Throwable {
+    public void test143() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test142");
+            System.out.format("%n%s%n", "RegressionTest0.test143");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.util.Iterator<java.lang.Object>, org.mockito.internal.util.reflection.GenericMaster> objItorWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.util.Iterator<java.lang.Object>, org.mockito.internal.util.reflection.GenericMaster>(false);
     }
 
     @Test
-    public void test143() throws Throwable {
+    public void test144() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test143");
+            System.out.format("%n%s%n", "RegressionTest0.test144");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Object obj1 = org.mockito.internal.util.JavaEightUtil.emptyOptionalDouble();
         boolean boolean2 = weakConcurrentMap0.equals(obj1);
@@ -3046,9 +3081,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test144() throws Throwable {
+    public void test145() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test144");
+            System.out.format("%n%s%n", "RegressionTest0.test145");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -3076,9 +3111,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test145() throws Throwable {
+    public void test146() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test145");
+            System.out.format("%n%s%n", "RegressionTest0.test146");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -3107,9 +3142,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test146() throws Throwable {
+    public void test147() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test146");
+            System.out.format("%n%s%n", "RegressionTest0.test147");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor3 = weakConcurrentMap2.iterator();
         java.util.Iterator<java.lang.Object> objItor4 = weakConcurrentMap2.iterator();
@@ -3121,9 +3156,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test147() throws Throwable {
+    public void test148() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test147");
+            System.out.format("%n%s%n", "RegressionTest0.test148");
         java.lang.reflect.WildcardType wildcardType0 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
         java.lang.reflect.WildcardType wildcardType2 = wildCardBoundedType1.wildCard();
@@ -3138,9 +3173,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test148() throws Throwable {
+    public void test149() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test148");
+            System.out.format("%n%s%n", "RegressionTest0.test149");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -3156,9 +3191,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test149() throws Throwable {
+    public void test150() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test149");
+            System.out.format("%n%s%n", "RegressionTest0.test150");
         java.io.File file1 = null;
         try {
             org.mockito.internal.util.io.IOUtil.writeText("<[]>", file1);
@@ -3168,9 +3203,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test150() throws Throwable {
+    public void test151() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test150");
+            System.out.format("%n%s%n", "RegressionTest0.test151");
         org.mockito.internal.util.reflection.FieldCopier fieldCopier0 = new org.mockito.internal.util.reflection.FieldCopier();
         try {
             org.mockito.invocation.MockHandler<org.mockito.internal.util.reflection.FieldCopier> fieldCopierMockHandler1 = org.mockito.internal.util.MockUtil.getMockHandler(fieldCopier0);
@@ -3180,9 +3215,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test151() throws Throwable {
+    public void test152() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test151");
+            System.out.format("%n%s%n", "RegressionTest0.test152");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         java.lang.reflect.WildcardType wildcardType1 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType2 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType1);
@@ -3251,9 +3286,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test152() throws Throwable {
+    public void test153() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test152");
+            System.out.format("%n%s%n", "RegressionTest0.test153");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -3271,9 +3306,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test153() throws Throwable {
+    public void test154() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test153");
+            System.out.format("%n%s%n", "RegressionTest0.test154");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Object obj1 = org.mockito.internal.util.JavaEightUtil.emptyOptionalDouble();
         boolean boolean2 = weakConcurrentMap0.equals(obj1);
@@ -3306,9 +3341,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test154() throws Throwable {
+    public void test155() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test154");
+            System.out.format("%n%s%n", "RegressionTest0.test155");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -3353,9 +3388,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test155() throws Throwable {
+    public void test156() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test155");
+            System.out.format("%n%s%n", "RegressionTest0.test156");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool1 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable4 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap2, "");
@@ -3434,9 +3469,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test156() throws Throwable {
+    public void test157() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test156");
+            System.out.format("%n%s%n", "RegressionTest0.test157");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = org.mockito.internal.util.Checks.checkItemsNotNull(weakConcurrentMap0, "hi!");
         boolean boolean4 = weakConcurrentMap2.equals((java.lang.Object) (-1));
@@ -3451,9 +3486,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test157() throws Throwable {
+    public void test158() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test157");
+            System.out.format("%n%s%n", "RegressionTest0.test158");
         org.mockito.internal.util.reflection.FieldCopier fieldCopier0 = new org.mockito.internal.util.reflection.FieldCopier();
         org.mockito.internal.util.MockCreationValidator mockCreationValidator1 = new org.mockito.internal.util.MockCreationValidator();
         org.mockito.mock.SerializableMode serializableMode3 = null;
@@ -3470,9 +3505,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test158() throws Throwable {
+    public void test159() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test158");
+            System.out.format("%n%s%n", "RegressionTest0.test159");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) 100L);
         java.lang.reflect.Field field2 = null;
         org.mockito.internal.util.reflection.BeanPropertySetter beanPropertySetter3 = new org.mockito.internal.util.reflection.BeanPropertySetter((java.lang.Object) defaultMockingDetails1, field2);
@@ -3499,9 +3534,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test159() throws Throwable {
+    public void test160() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test159");
+            System.out.format("%n%s%n", "RegressionTest0.test160");
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner24 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object[] objArray25 = new java.lang.Object[] { (short) 10, (byte) 100, 1.0d, 1, (-1.0f), 10.0f, (byte) 1, 1, 10.0f, (-1.0d), (short) -1, "hi!", 1.0d, (byte) 1, 1.0f, (short) -1, 10, 10L, false, (byte) -1, (-1L), false, (-1), cleaner24 };
         java.util.LinkedHashSet<java.lang.Object> objSet26 = new java.util.LinkedHashSet<java.lang.Object>();
@@ -3518,13 +3553,13 @@ public class RegressionTest0 {
         org.junit.Assert.assertNotNull(weakConcurrentMap29);
         org.junit.Assert.assertTrue("'" + boolean31 + "' != '" + true + "'", boolean31 == true);
         org.junit.Assert.assertTrue("'" + boolean32 + "' != '" + false + "'", boolean32 == false);
-        org.junit.Assert.assertTrue("'" + str33 + "' != '" + "[]10.0\n1.0\n1\n100\n10\nINLINE\n-1\n10\n1.0\n-1.0\nfalse\nhi!\n-1\n-1.0\n-1\n10\n1\n-1" + "'", str33.equals("[]10.0\n1.0\n1\n100\n10\nINLINE\n-1\n10\n1.0\n-1.0\nfalse\nhi!\n-1\n-1.0\n-1\n10\n1\n-1"));
+        org.junit.Assert.assertTrue("'" + str33 + "' != '" + "[]10\n1\n1\n1.0\nfalse\n-1\n10\n100\nINLINE\nhi!\n-1\n10\n-1\n1.0\n-1.0\n10.0\n-1.0\n-1" + "'", str33.equals("[]10\n1\n1\n1.0\nfalse\n-1\n10\n100\nINLINE\nhi!\n-1\n10\n-1\n1.0\n-1.0\n10.0\n-1.0\n-1"));
     }
 
     @Test
-    public void test160() throws Throwable {
+    public void test161() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test160");
+            System.out.format("%n%s%n", "RegressionTest0.test161");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         java.util.Iterator<java.lang.Object> objItor2 = weakConcurrentMap0.iterator();
@@ -3541,9 +3576,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test161() throws Throwable {
+    public void test162() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test161");
+            System.out.format("%n%s%n", "RegressionTest0.test162");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         java.util.Iterator<java.lang.Object> objItor2 = weakConcurrentMap0.iterator();
@@ -3557,9 +3592,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test162() throws Throwable {
+    public void test163() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test162");
+            System.out.format("%n%s%n", "RegressionTest0.test163");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
@@ -3572,9 +3607,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test163() throws Throwable {
+    public void test164() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test163");
+            System.out.format("%n%s%n", "RegressionTest0.test164");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         boolean boolean3 = weakConcurrentMap0.add((java.lang.Object) cleanerEnumWeakConcurrentMap2);
@@ -3589,9 +3624,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test164() throws Throwable {
+    public void test165() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test164");
+            System.out.format("%n%s%n", "RegressionTest0.test165");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray2 = new org.mockito.internal.util.reflection.InstanceField[] {};
@@ -3616,9 +3651,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test165() throws Throwable {
+    public void test166() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test165");
+            System.out.format("%n%s%n", "RegressionTest0.test166");
         java.lang.Object obj0 = null;
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails(obj0);
         java.lang.Object obj2 = defaultMockingDetails1.getMock();
@@ -3632,9 +3667,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test166() throws Throwable {
+    public void test167() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test166");
+            System.out.format("%n%s%n", "RegressionTest0.test167");
         org.mockito.internal.util.collections.IdentitySet identitySet0 = new org.mockito.internal.util.collections.IdentitySet();
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails2 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) ' ');
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails5 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails2, "", "hi!");
@@ -3650,9 +3685,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test167() throws Throwable {
+    public void test168() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test167");
+            System.out.format("%n%s%n", "RegressionTest0.test168");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -3675,9 +3710,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test168() throws Throwable {
+    public void test169() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test168");
+            System.out.format("%n%s%n", "RegressionTest0.test169");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -3692,9 +3727,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test169() throws Throwable {
+    public void test170() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test169");
+            System.out.format("%n%s%n", "RegressionTest0.test170");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -3719,9 +3754,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test170() throws Throwable {
+    public void test171() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test170");
+            System.out.format("%n%s%n", "RegressionTest0.test171");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool2 = new org.mockito.internal.util.reflection.LenientCopyTool();
@@ -3778,9 +3813,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test171() throws Throwable {
+    public void test172() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test171");
+            System.out.format("%n%s%n", "RegressionTest0.test172");
         java.lang.Object obj0 = org.mockito.internal.util.JavaEightUtil.emptyLongStream();
         java.lang.reflect.Field field1 = null;
         org.mockito.internal.util.collections.IdentitySet identitySet2 = new org.mockito.internal.util.collections.IdentitySet();
@@ -3829,9 +3864,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test172() throws Throwable {
+    public void test173() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test172");
+            System.out.format("%n%s%n", "RegressionTest0.test173");
         org.mockito.internal.util.collections.IdentitySet identitySet0 = new org.mockito.internal.util.collections.IdentitySet();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor2 = weakConcurrentMap1.iterator();
@@ -3860,9 +3895,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test173() throws Throwable {
+    public void test174() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test173");
+            System.out.format("%n%s%n", "RegressionTest0.test174");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -3883,9 +3918,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test174() throws Throwable {
+    public void test175() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test174");
+            System.out.format("%n%s%n", "RegressionTest0.test175");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         java.util.Iterator<java.lang.Object> objItor2 = weakConcurrentMap0.iterator();
@@ -3901,9 +3936,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test175() throws Throwable {
+    public void test176() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test175");
+            System.out.format("%n%s%n", "RegressionTest0.test176");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Object obj1 = org.mockito.internal.util.JavaEightUtil.emptyOptionalDouble();
         boolean boolean2 = weakConcurrentMap0.equals(obj1);
@@ -3933,9 +3968,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test176() throws Throwable {
+    public void test177() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test176");
+            System.out.format("%n%s%n", "RegressionTest0.test177");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Object obj1 = org.mockito.internal.util.JavaEightUtil.emptyOptionalDouble();
         boolean boolean2 = weakConcurrentMap0.equals(obj1);
@@ -3948,9 +3983,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test177() throws Throwable {
+    public void test178() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test177");
+            System.out.format("%n%s%n", "RegressionTest0.test178");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -3972,9 +4007,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test178() throws Throwable {
+    public void test179() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test178");
+            System.out.format("%n%s%n", "RegressionTest0.test179");
         try {
             org.mockito.internal.util.Timer timer1 = new org.mockito.internal.util.Timer((-1L));
             org.junit.Assert.fail("Expected exception of type org.mockito.exceptions.misusing.FriendlyReminderException; message: \n\nDon't panic! I'm just a friendly reminder!\nIt is impossible for time to go backward, therefore...\nYou cannot put negative value of duration: (-1)\nas argument of timer methods (after(), timeout())\n");
@@ -3983,9 +4018,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test179() throws Throwable {
+    public void test180() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test179");
+            System.out.format("%n%s%n", "RegressionTest0.test180");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = org.mockito.internal.util.Checks.checkItemsNotNull(weakConcurrentMap0, "hi!");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
@@ -4002,9 +4037,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test180() throws Throwable {
+    public void test181() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test180");
+            System.out.format("%n%s%n", "RegressionTest0.test181");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         java.util.Iterator<java.lang.String> strItor2 = strWeakConcurrentSet1.iterator();
@@ -4015,9 +4050,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test181() throws Throwable {
+    public void test182() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test181");
+            System.out.format("%n%s%n", "RegressionTest0.test182");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable2 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap0, "");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -4042,9 +4077,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test182() throws Throwable {
+    public void test183() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test182");
+            System.out.format("%n%s%n", "RegressionTest0.test183");
         org.mockito.internal.util.collections.IdentitySet identitySet0 = new org.mockito.internal.util.collections.IdentitySet();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor2 = weakConcurrentMap1.iterator();
@@ -4088,9 +4123,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test183() throws Throwable {
+    public void test184() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test183");
+            System.out.format("%n%s%n", "RegressionTest0.test184");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable2 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap0, "");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -4137,9 +4172,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test184() throws Throwable {
+    public void test185() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test184");
+            System.out.format("%n%s%n", "RegressionTest0.test185");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         boolean boolean3 = weakConcurrentMap0.add((java.lang.Object) cleanerEnumWeakConcurrentMap2);
@@ -4156,18 +4191,18 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test185() throws Throwable {
+    public void test186() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test185");
+            System.out.format("%n%s%n", "RegressionTest0.test186");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Spliterator<java.lang.Object> objSpliterator1 = weakConcurrentMap0.spliterator();
         org.junit.Assert.assertNotNull(objSpliterator1);
     }
 
     @Test
-    public void test186() throws Throwable {
+    public void test187() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test186");
+            System.out.format("%n%s%n", "RegressionTest0.test187");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool2 = new org.mockito.internal.util.reflection.LenientCopyTool();
@@ -4192,9 +4227,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test187() throws Throwable {
+    public void test188() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test187");
+            System.out.format("%n%s%n", "RegressionTest0.test188");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool2 = new org.mockito.internal.util.reflection.LenientCopyTool();
@@ -4215,9 +4250,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test188() throws Throwable {
+    public void test189() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test188");
+            System.out.format("%n%s%n", "RegressionTest0.test189");
         java.lang.reflect.Field field1 = null;
         try {
             org.mockito.internal.util.reflection.FieldInitializer fieldInitializer2 = new org.mockito.internal.util.reflection.FieldInitializer((java.lang.Object) 100, field1);
@@ -4227,9 +4262,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test189() throws Throwable {
+    public void test190() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test189");
+            System.out.format("%n%s%n", "RegressionTest0.test190");
         java.lang.reflect.WildcardType wildcardType0 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
         java.lang.reflect.WildcardType wildcardType2 = wildCardBoundedType1.wildCard();
@@ -4244,9 +4279,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test190() throws Throwable {
+    public void test191() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test190");
+            System.out.format("%n%s%n", "RegressionTest0.test191");
         org.mockito.internal.util.reflection.FieldInitializationReport fieldInitializationReport3 = new org.mockito.internal.util.reflection.FieldInitializationReport((java.lang.Object) (short) 10, false, false);
         boolean boolean4 = fieldInitializationReport3.fieldWasInitialized();
         java.lang.Object obj5 = fieldInitializationReport3.fieldInstance();
@@ -4259,9 +4294,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test191() throws Throwable {
+    public void test192() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test191");
+            System.out.format("%n%s%n", "RegressionTest0.test192");
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner23 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object[] objArray24 = new java.lang.Object[] { (short) 10, (byte) 100, 1.0d, 1, (-1.0f), 10.0f, (byte) 1, 1, 10.0f, (-1.0d), (short) -1, "hi!", 1.0d, (byte) 1, 1.0f, (short) -1, 10, 10L, false, (byte) -1, (-1L), false, (-1), cleaner23 };
         java.util.LinkedHashSet<java.lang.Object> objSet25 = new java.util.LinkedHashSet<java.lang.Object>();
@@ -4282,17 +4317,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test192() throws Throwable {
+    public void test193() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test192");
+            System.out.format("%n%s%n", "RegressionTest0.test193");
         java.lang.String str1 = org.mockito.internal.util.StringUtil.decamelizeMatcher("<custom argument matcher><[]>null");
         org.junit.Assert.assertTrue("'" + str1 + "' != '" + "<<custom argument matcher><[]>null>" + "'", str1.equals("<<custom argument matcher><[]>null>"));
     }
 
     @Test
-    public void test193() throws Throwable {
+    public void test194() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test193");
+            System.out.format("%n%s%n", "RegressionTest0.test194");
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner23 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object[] objArray24 = new java.lang.Object[] { (short) 10, (byte) 100, 1.0d, 1, (-1.0f), 10.0f, (byte) 1, 1, 10.0f, (-1.0d), (short) -1, "hi!", 1.0d, (byte) 1, 1.0f, (short) -1, 10, 10L, false, (byte) -1, (-1L), false, (-1), cleaner23 };
         java.util.LinkedHashSet<java.lang.Object> objSet25 = new java.util.LinkedHashSet<java.lang.Object>();
@@ -4318,9 +4353,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test194() throws Throwable {
+    public void test195() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test194");
+            System.out.format("%n%s%n", "RegressionTest0.test195");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         java.util.Iterator<java.lang.Object> objItor2 = weakConcurrentMap0.iterator();
@@ -4336,9 +4371,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test195() throws Throwable {
+    public void test196() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test195");
+            System.out.format("%n%s%n", "RegressionTest0.test196");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) 100L);
         java.lang.reflect.Field field2 = null;
         org.mockito.internal.util.reflection.BeanPropertySetter beanPropertySetter3 = new org.mockito.internal.util.reflection.BeanPropertySetter((java.lang.Object) defaultMockingDetails1, field2);
@@ -4361,9 +4396,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test196() throws Throwable {
+    public void test197() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test196");
+            System.out.format("%n%s%n", "RegressionTest0.test197");
         try {
             org.mockito.internal.util.Timer timer1 = new org.mockito.internal.util.Timer((long) (short) -1);
             org.junit.Assert.fail("Expected exception of type org.mockito.exceptions.misusing.FriendlyReminderException; message: \n\nDon't panic! I'm just a friendly reminder!\nIt is impossible for time to go backward, therefore...\nYou cannot put negative value of duration: (-1)\nas argument of timer methods (after(), timeout())\n");
@@ -4372,9 +4407,23 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test197() throws Throwable {
+    public void test198() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test197");
+            System.out.format("%n%s%n", "RegressionTest0.test198");
+        java.lang.reflect.WildcardType wildcardType0 = null;
+        org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
+        java.lang.reflect.WildcardType wildcardType2 = wildCardBoundedType1.wildCard();
+        java.lang.reflect.WildcardType wildcardType3 = wildCardBoundedType1.wildCard();
+        boolean boolean5 = wildCardBoundedType1.equals((java.lang.Object) true);
+        org.junit.Assert.assertNull(wildcardType2);
+        org.junit.Assert.assertNull(wildcardType3);
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+    }
+
+    @Test
+    public void test199() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test199");
         java.util.RandomAccess randomAccess0 = null;
         try {
             java.util.RandomAccess randomAccess3 = org.mockito.internal.util.Checks.checkNotNull(randomAccess0, "", "");
@@ -4384,9 +4433,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test198() throws Throwable {
+    public void test200() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test198");
+            System.out.format("%n%s%n", "RegressionTest0.test200");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -4405,9 +4454,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test199() throws Throwable {
+    public void test201() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test199");
+            System.out.format("%n%s%n", "RegressionTest0.test201");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -4427,9 +4476,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test200() throws Throwable {
+    public void test202() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test200");
+            System.out.format("%n%s%n", "RegressionTest0.test202");
         org.mockito.internal.util.Timer timer1 = new org.mockito.internal.util.Timer((long) 18);
         long long2 = timer1.duration();
         boolean boolean3 = timer1.isCounting();
@@ -4438,9 +4487,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test201() throws Throwable {
+    public void test203() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test201");
+            System.out.format("%n%s%n", "RegressionTest0.test203");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) ' ');
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails4 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails1, "", "hi!");
         try {
@@ -4452,9 +4501,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test202() throws Throwable {
+    public void test204() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test202");
+            System.out.format("%n%s%n", "RegressionTest0.test204");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         boolean boolean3 = weakConcurrentMap0.add((java.lang.Object) cleanerEnumWeakConcurrentMap2);
@@ -4464,9 +4513,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test203() throws Throwable {
+    public void test205() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test203");
+            System.out.format("%n%s%n", "RegressionTest0.test205");
         java.lang.reflect.Field field0 = null;
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Object obj2 = org.mockito.internal.util.JavaEightUtil.emptyOptionalDouble();
@@ -4517,9 +4566,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test204() throws Throwable {
+    public void test206() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test204");
+            System.out.format("%n%s%n", "RegressionTest0.test206");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
@@ -4534,9 +4583,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test205() throws Throwable {
+    public void test207() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test205");
+            System.out.format("%n%s%n", "RegressionTest0.test207");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner2 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
@@ -4616,9 +4665,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test206() throws Throwable {
+    public void test208() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test206");
+            System.out.format("%n%s%n", "RegressionTest0.test208");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool2 = new org.mockito.internal.util.reflection.LenientCopyTool();
@@ -4650,9 +4699,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test207() throws Throwable {
+    public void test209() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test207");
+            System.out.format("%n%s%n", "RegressionTest0.test209");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner2 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
@@ -4737,9 +4786,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test208() throws Throwable {
+    public void test210() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test208");
+            System.out.format("%n%s%n", "RegressionTest0.test210");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool2 = new org.mockito.internal.util.reflection.LenientCopyTool();
@@ -4764,9 +4813,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test209() throws Throwable {
+    public void test211() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test209");
+            System.out.format("%n%s%n", "RegressionTest0.test211");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable2 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap0, "");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -4790,9 +4839,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test210() throws Throwable {
+    public void test212() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test210");
+            System.out.format("%n%s%n", "RegressionTest0.test212");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Object obj1 = org.mockito.internal.util.JavaEightUtil.emptyOptionalDouble();
         boolean boolean2 = weakConcurrentMap0.equals(obj1);
@@ -4822,9 +4871,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test211() throws Throwable {
+    public void test213() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test211");
+            System.out.format("%n%s%n", "RegressionTest0.test213");
         java.lang.reflect.Field field0 = null;
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -4843,9 +4892,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test212() throws Throwable {
+    public void test214() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test212");
+            System.out.format("%n%s%n", "RegressionTest0.test214");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Object obj1 = org.mockito.internal.util.JavaEightUtil.emptyOptionalDouble();
         boolean boolean2 = weakConcurrentMap0.equals(obj1);
@@ -4858,9 +4907,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test213() throws Throwable {
+    public void test215() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test213");
+            System.out.format("%n%s%n", "RegressionTest0.test215");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable3 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap1, "");
@@ -4943,9 +4992,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test214() throws Throwable {
+    public void test216() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test214");
+            System.out.format("%n%s%n", "RegressionTest0.test216");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         boolean boolean3 = weakConcurrentMap0.contains((java.lang.Object) (byte) 1);
@@ -4957,9 +5006,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test215() throws Throwable {
+    public void test217() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test215");
+            System.out.format("%n%s%n", "RegressionTest0.test217");
         org.mockito.internal.util.Primitives primitives0 = new org.mockito.internal.util.Primitives();
         org.mockito.internal.util.reflection.FieldInitializationReport fieldInitializationReport3 = new org.mockito.internal.util.reflection.FieldInitializationReport((java.lang.Object) primitives0, false, false);
         org.mockito.internal.util.Primitives primitives5 = org.mockito.internal.util.Checks.checkNotNull(primitives0, "");
@@ -4967,9 +5016,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test216() throws Throwable {
+    public void test218() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test216");
+            System.out.format("%n%s%n", "RegressionTest0.test218");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         java.util.Iterator<java.lang.Object> objItor2 = weakConcurrentMap0.iterator();
@@ -4987,9 +5036,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test217() throws Throwable {
+    public void test219() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test217");
+            System.out.format("%n%s%n", "RegressionTest0.test219");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -5029,9 +5078,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test218() throws Throwable {
+    public void test220() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test218");
+            System.out.format("%n%s%n", "RegressionTest0.test220");
         org.mockito.internal.util.io.IOUtil iOUtil0 = new org.mockito.internal.util.io.IOUtil();
         org.mockito.internal.util.io.IOUtil iOUtil3 = org.mockito.internal.util.Checks.checkNotNull(iOUtil0, "hi!", "hi!");
         org.mockito.internal.util.reflection.FieldInitializationReport fieldInitializationReport6 = new org.mockito.internal.util.reflection.FieldInitializationReport((java.lang.Object) iOUtil0, true, true);
@@ -5041,9 +5090,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test219() throws Throwable {
+    public void test221() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test219");
+            System.out.format("%n%s%n", "RegressionTest0.test221");
         org.mockito.internal.util.reflection.FieldCopier fieldCopier0 = new org.mockito.internal.util.reflection.FieldCopier();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Object obj2 = org.mockito.internal.util.JavaEightUtil.emptyOptionalDouble();
@@ -5087,9 +5136,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test220() throws Throwable {
+    public void test222() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test220");
+            System.out.format("%n%s%n", "RegressionTest0.test222");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable2 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap0, "");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -5111,9 +5160,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test221() throws Throwable {
+    public void test223() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test221");
+            System.out.format("%n%s%n", "RegressionTest0.test223");
         java.lang.reflect.WildcardType wildcardType0 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
         org.mockito.internal.util.Checks checks2 = new org.mockito.internal.util.Checks();
@@ -5131,9 +5180,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test222() throws Throwable {
+    public void test224() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test222");
+            System.out.format("%n%s%n", "RegressionTest0.test224");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         java.lang.reflect.WildcardType wildcardType1 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType2 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType1);
@@ -5156,9 +5205,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test223() throws Throwable {
+    public void test225() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test223");
+            System.out.format("%n%s%n", "RegressionTest0.test225");
         org.mockito.internal.util.reflection.FieldCopier fieldCopier0 = new org.mockito.internal.util.reflection.FieldCopier();
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool1 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
@@ -5317,9 +5366,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test224() throws Throwable {
+    public void test226() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test224");
+            System.out.format("%n%s%n", "RegressionTest0.test226");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray2 = new org.mockito.internal.util.reflection.InstanceField[] {};
@@ -5343,9 +5392,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test225() throws Throwable {
+    public void test227() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test225");
+            System.out.format("%n%s%n", "RegressionTest0.test227");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -5358,9 +5407,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test226() throws Throwable {
+    public void test228() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test226");
+            System.out.format("%n%s%n", "RegressionTest0.test228");
         java.lang.reflect.Field field0 = null;
         java.lang.Object obj1 = null;
         try {
@@ -5371,9 +5420,26 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test227() throws Throwable {
+    public void test229() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test227");
+            System.out.format("%n%s%n", "RegressionTest0.test229");
+        org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
+        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
+        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
+        java.lang.Thread thread4 = strWeakConcurrentSet1.getCleanerThread();
+        boolean boolean6 = strWeakConcurrentSet1.add("");
+        java.util.Iterator<java.lang.String> strItor7 = strWeakConcurrentSet1.iterator();
+        org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE + "'", cleaner0.equals(org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE));
+        org.junit.Assert.assertNotNull(strWeakConcurrentSet3);
+        org.junit.Assert.assertNull(thread4);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + true + "'", boolean6 == true);
+        org.junit.Assert.assertNotNull(strItor7);
+    }
+
+    @Test
+    public void test230() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test230");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Object obj1 = org.mockito.internal.util.JavaEightUtil.emptyOptionalDouble();
         boolean boolean2 = weakConcurrentMap0.equals(obj1);
@@ -5451,9 +5517,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test228() throws Throwable {
+    public void test231() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test228");
+            System.out.format("%n%s%n", "RegressionTest0.test231");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         java.util.Iterator<java.lang.Object> objItor2 = weakConcurrentMap0.iterator();
@@ -5469,9 +5535,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test229() throws Throwable {
+    public void test232() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test229");
+            System.out.format("%n%s%n", "RegressionTest0.test232");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray2 = new org.mockito.internal.util.reflection.InstanceField[] {};
@@ -5494,9 +5560,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test230() throws Throwable {
+    public void test233() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test230");
+            System.out.format("%n%s%n", "RegressionTest0.test233");
         org.mockito.internal.util.reflection.FieldCopier fieldCopier0 = null;
         try {
             org.mockito.internal.util.MockUtil.resetMock(fieldCopier0);
@@ -5506,9 +5572,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test231() throws Throwable {
+    public void test234() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test231");
+            System.out.format("%n%s%n", "RegressionTest0.test234");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = org.mockito.internal.util.Checks.checkItemsNotNull(weakConcurrentMap0, "hi!");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap3 = org.mockito.internal.util.concurrent.WeakConcurrentMap.of((java.lang.Iterable<java.lang.Object>) weakConcurrentMap0);
@@ -5517,9 +5583,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test232() throws Throwable {
+    public void test235() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test232");
+            System.out.format("%n%s%n", "RegressionTest0.test235");
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner1 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet2 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner1);
@@ -5549,9 +5615,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test233() throws Throwable {
+    public void test236() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test233");
+            System.out.format("%n%s%n", "RegressionTest0.test236");
         java.lang.Object obj0 = null;
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails(obj0);
         java.lang.Object obj2 = defaultMockingDetails1.getMock();
@@ -5564,9 +5630,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test234() throws Throwable {
+    public void test237() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test234");
+            System.out.format("%n%s%n", "RegressionTest0.test237");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -5604,9 +5670,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test235() throws Throwable {
+    public void test238() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test235");
+            System.out.format("%n%s%n", "RegressionTest0.test238");
         java.lang.Object obj0 = null;
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails(obj0);
         java.lang.reflect.Field field2 = null;
@@ -5619,9 +5685,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test236() throws Throwable {
+    public void test239() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test236");
+            System.out.format("%n%s%n", "RegressionTest0.test239");
         java.lang.reflect.WildcardType wildcardType0 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
         java.lang.reflect.WildcardType wildcardType2 = wildCardBoundedType1.wildCard();
@@ -5643,9 +5709,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test237() throws Throwable {
+    public void test240() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test237");
+            System.out.format("%n%s%n", "RegressionTest0.test240");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool1 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable4 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap2, "");
@@ -5722,9 +5788,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test238() throws Throwable {
+    public void test241() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test238");
+            System.out.format("%n%s%n", "RegressionTest0.test241");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -5753,9 +5819,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test239() throws Throwable {
+    public void test242() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test239");
+            System.out.format("%n%s%n", "RegressionTest0.test242");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(true);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.remove((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -5766,9 +5832,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test240() throws Throwable {
+    public void test243() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test240");
+            System.out.format("%n%s%n", "RegressionTest0.test243");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Object obj1 = org.mockito.internal.util.JavaEightUtil.emptyOptionalDouble();
         boolean boolean2 = weakConcurrentMap0.equals(obj1);
@@ -5797,34 +5863,34 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test241() throws Throwable {
+    public void test244() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test241");
+            System.out.format("%n%s%n", "RegressionTest0.test244");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.stream.Stream<java.lang.Object> objStream1 = weakConcurrentMap0.stream();
         org.junit.Assert.assertNotNull(objStream1);
     }
 
     @Test
-    public void test242() throws Throwable {
+    public void test245() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test242");
+            System.out.format("%n%s%n", "RegressionTest0.test245");
         java.lang.String str1 = org.mockito.internal.util.StringUtil.decamelizeMatcher("hi!");
         org.junit.Assert.assertTrue("'" + str1 + "' != '" + "<hi!>" + "'", str1.equals("<hi!>"));
     }
 
     @Test
-    public void test243() throws Throwable {
+    public void test246() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test243");
+            System.out.format("%n%s%n", "RegressionTest0.test246");
         java.lang.String str2 = org.mockito.internal.util.Checks.checkNotNull("[]", "[]");
         org.junit.Assert.assertTrue("'" + str2 + "' != '" + "[]" + "'", str2.equals("[]"));
     }
 
     @Test
-    public void test244() throws Throwable {
+    public void test247() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test244");
+            System.out.format("%n%s%n", "RegressionTest0.test247");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.reflection.FieldInitializationReport fieldInitializationReport4 = new org.mockito.internal.util.reflection.FieldInitializationReport((java.lang.Object) cleanerEnumWeakConcurrentMap1, false, true);
         boolean boolean5 = fieldInitializationReport4.fieldWasInitializedUsingContructorArgs();
@@ -5854,9 +5920,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test245() throws Throwable {
+    public void test248() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test245");
+            System.out.format("%n%s%n", "RegressionTest0.test248");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner2 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
@@ -5953,18 +6019,41 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test246() throws Throwable {
+    public void test249() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test246");
+            System.out.format("%n%s%n", "RegressionTest0.test249");
         org.mockito.internal.util.collections.ListUtil listUtil0 = new org.mockito.internal.util.collections.ListUtil();
-        org.mockito.internal.util.collections.ListUtil listUtil2 = org.mockito.internal.util.Checks.checkNotNull(listUtil0, "[]10.0\n1.0\n1\n100\n10\nINLINE\n-1\n10\n1.0\n-1.0\nfalse\nhi!\n-1\n-1.0\n-1\n10\n1\n-1");
+        org.mockito.internal.util.collections.ListUtil listUtil2 = org.mockito.internal.util.Checks.checkNotNull(listUtil0, "[]10\n1\n1\n1.0\nfalse\n-1\n10\n100\nINLINE\nhi!\n-1\n10\n-1\n1.0\n-1.0\n10.0\n-1.0\n-1");
         org.junit.Assert.assertNotNull(listUtil2);
     }
 
     @Test
-    public void test247() throws Throwable {
+    public void test250() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test247");
+            System.out.format("%n%s%n", "RegressionTest0.test250");
+        org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
+        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
+        org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray2 = new org.mockito.internal.util.reflection.InstanceField[] {};
+        java.util.ArrayList<org.mockito.internal.util.reflection.InstanceField> instanceFieldList3 = new java.util.ArrayList<org.mockito.internal.util.reflection.InstanceField>();
+        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList3, instanceFieldArray2);
+        org.mockito.internal.util.reflection.Fields.InstanceFields instanceFields5 = new org.mockito.internal.util.reflection.Fields.InstanceFields((java.lang.Object) strWeakConcurrentSet1, (java.util.List<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList3);
+        org.mockito.internal.util.reflection.Fields.InstanceFields instanceFields6 = instanceFields5.notNull();
+        java.util.List<java.lang.Object> objList7 = instanceFields6.assignedValues();
+        org.mockito.internal.util.reflection.Fields.InstanceFields instanceFields8 = instanceFields6.notNull();
+        org.mockito.internal.util.reflection.Fields.InstanceFields instanceFields9 = instanceFields6.notNull();
+        org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE + "'", cleaner0.equals(org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE));
+        org.junit.Assert.assertNotNull(instanceFieldArray2);
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
+        org.junit.Assert.assertNotNull(instanceFields6);
+        org.junit.Assert.assertNotNull(objList7);
+        org.junit.Assert.assertNotNull(instanceFields8);
+        org.junit.Assert.assertNotNull(instanceFields9);
+    }
+
+    @Test
+    public void test251() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test251");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner3 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj4 = cleanerEnumWeakConcurrentMap2.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner3);
@@ -6000,9 +6089,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test248() throws Throwable {
+    public void test252() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test248");
+            System.out.format("%n%s%n", "RegressionTest0.test252");
         org.mockito.internal.util.collections.IdentitySet identitySet0 = new org.mockito.internal.util.collections.IdentitySet();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor2 = weakConcurrentMap1.iterator();
@@ -6091,9 +6180,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test249() throws Throwable {
+    public void test253() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test249");
+            System.out.format("%n%s%n", "RegressionTest0.test253");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -6109,9 +6198,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test250() throws Throwable {
+    public void test254() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test250");
+            System.out.format("%n%s%n", "RegressionTest0.test254");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -6129,9 +6218,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test251() throws Throwable {
+    public void test255() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test251");
+            System.out.format("%n%s%n", "RegressionTest0.test255");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
@@ -6149,9 +6238,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test252() throws Throwable {
+    public void test256() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test252");
+            System.out.format("%n%s%n", "RegressionTest0.test256");
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner1 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet2 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner1);
@@ -6255,9 +6344,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test253() throws Throwable {
+    public void test257() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test253");
+            System.out.format("%n%s%n", "RegressionTest0.test257");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = org.mockito.internal.util.Checks.checkItemsNotNull(weakConcurrentMap0, "hi!");
         int int3 = weakConcurrentMap2.size();
@@ -6298,9 +6387,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test254() throws Throwable {
+    public void test258() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test254");
+            System.out.format("%n%s%n", "RegressionTest0.test258");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray2 = new org.mockito.internal.util.reflection.InstanceField[] {};
@@ -6324,9 +6413,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test255() throws Throwable {
+    public void test259() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test255");
+            System.out.format("%n%s%n", "RegressionTest0.test259");
         org.mockito.internal.util.collections.IdentitySet identitySet0 = new org.mockito.internal.util.collections.IdentitySet();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor2 = weakConcurrentMap1.iterator();
@@ -6373,9 +6462,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test256() throws Throwable {
+    public void test260() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test256");
+            System.out.format("%n%s%n", "RegressionTest0.test260");
         java.lang.reflect.Field field0 = null;
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner1 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet2 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner1);
@@ -6390,9 +6479,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test257() throws Throwable {
+    public void test261() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test257");
+            System.out.format("%n%s%n", "RegressionTest0.test261");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -6414,9 +6503,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test258() throws Throwable {
+    public void test262() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test258");
+            System.out.format("%n%s%n", "RegressionTest0.test262");
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner0 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.DetachedThreadLocal<org.mockito.mock.MockName> mockNameDetachedThreadLocal1 = new org.mockito.internal.util.concurrent.DetachedThreadLocal<org.mockito.mock.MockName>(cleaner0);
         org.mockito.internal.util.MockNameImpl mockNameImpl3 = new org.mockito.internal.util.MockNameImpl("[]");
@@ -6425,9 +6514,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test259() throws Throwable {
+    public void test263() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test259");
+            System.out.format("%n%s%n", "RegressionTest0.test263");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) ' ');
         try {
             boolean boolean2 = defaultMockingDetails1.isSpy();
@@ -6437,9 +6526,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test260() throws Throwable {
+    public void test264() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test260");
+            System.out.format("%n%s%n", "RegressionTest0.test264");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray2 = new org.mockito.internal.util.reflection.InstanceField[] {};
@@ -6463,9 +6552,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test261() throws Throwable {
+    public void test265() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test261");
+            System.out.format("%n%s%n", "RegressionTest0.test265");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         java.util.Iterator<java.lang.Object> objItor2 = weakConcurrentMap0.iterator();
@@ -6481,9 +6570,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test262() throws Throwable {
+    public void test266() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test262");
+            System.out.format("%n%s%n", "RegressionTest0.test266");
         java.lang.Object obj0 = null;
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails(obj0);
         try {
@@ -6494,9 +6583,29 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test263() throws Throwable {
+    public void test267() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test263");
+            System.out.format("%n%s%n", "RegressionTest0.test267");
+        org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
+        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
+        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
+        java.lang.Thread thread4 = strWeakConcurrentSet1.getCleanerThread();
+        boolean boolean6 = strWeakConcurrentSet1.add("");
+        boolean boolean8 = strWeakConcurrentSet1.contains("class org.mockito.internal.util.concurrent.WeakConcurrentMap");
+        org.mockito.internal.util.reflection.FieldInitializationReport fieldInitializationReport11 = new org.mockito.internal.util.reflection.FieldInitializationReport((java.lang.Object) boolean8, false, false);
+        java.lang.Class<?> wildcardClass12 = fieldInitializationReport11.fieldClass();
+        org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE + "'", cleaner0.equals(org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE));
+        org.junit.Assert.assertNotNull(strWeakConcurrentSet3);
+        org.junit.Assert.assertNull(thread4);
+        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + true + "'", boolean6 == true);
+        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
+        org.junit.Assert.assertNotNull(wildcardClass12);
+    }
+
+    @Test
+    public void test268() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test268");
         org.mockito.internal.util.collections.IdentitySet identitySet0 = new org.mockito.internal.util.collections.IdentitySet();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor2 = weakConcurrentMap1.iterator();
@@ -6541,9 +6650,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test264() throws Throwable {
+    public void test269() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test264");
+            System.out.format("%n%s%n", "RegressionTest0.test269");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         java.util.Iterator<java.lang.Object> objItor2 = weakConcurrentMap0.iterator();
@@ -6565,9 +6674,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test265() throws Throwable {
+    public void test270() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test265");
+            System.out.format("%n%s%n", "RegressionTest0.test270");
         java.lang.reflect.WildcardType wildcardType0 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
         org.mockito.internal.util.Checks checks2 = new org.mockito.internal.util.Checks();
@@ -6585,9 +6694,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test266() throws Throwable {
+    public void test271() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test266");
+            System.out.format("%n%s%n", "RegressionTest0.test271");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         boolean boolean3 = weakConcurrentMap0.contains((java.lang.Object) (byte) 1);
@@ -6623,9 +6732,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test267() throws Throwable {
+    public void test272() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test267");
+            System.out.format("%n%s%n", "RegressionTest0.test272");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = org.mockito.internal.util.Checks.checkItemsNotNull(weakConcurrentMap0, "hi!");
         boolean boolean4 = weakConcurrentMap2.equals((java.lang.Object) (-1));
@@ -6638,9 +6747,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test268() throws Throwable {
+    public void test273() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test268");
+            System.out.format("%n%s%n", "RegressionTest0.test273");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = org.mockito.internal.util.Checks.checkItemsNotNull(weakConcurrentMap0, "hi!");
         java.lang.String str3 = weakConcurrentMap0.toString();
@@ -6654,9 +6763,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test269() throws Throwable {
+    public void test274() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test269");
+            System.out.format("%n%s%n", "RegressionTest0.test274");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = org.mockito.internal.util.Checks.checkItemsNotNull(weakConcurrentMap0, "hi!");
         boolean boolean4 = weakConcurrentMap2.equals((java.lang.Object) (-1));
@@ -6670,9 +6779,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test270() throws Throwable {
+    public void test275() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test270");
+            System.out.format("%n%s%n", "RegressionTest0.test275");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -6698,16 +6807,16 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test271() throws Throwable {
+    public void test276() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test271");
+            System.out.format("%n%s%n", "RegressionTest0.test276");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.CharSequence, org.mockito.internal.util.reflection.GenericTypeExtractor> charSequenceWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.CharSequence, org.mockito.internal.util.reflection.GenericTypeExtractor>(false);
     }
 
     @Test
-    public void test272() throws Throwable {
+    public void test277() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test272");
+            System.out.format("%n%s%n", "RegressionTest0.test277");
         java.lang.reflect.WildcardType wildcardType0 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
         java.lang.reflect.WildcardType wildcardType2 = wildCardBoundedType1.wildCard();
@@ -6731,9 +6840,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test273() throws Throwable {
+    public void test278() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test273");
+            System.out.format("%n%s%n", "RegressionTest0.test278");
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner1 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet2 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner1);
@@ -6831,9 +6940,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test274() throws Throwable {
+    public void test279() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test274");
+            System.out.format("%n%s%n", "RegressionTest0.test279");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -6880,9 +6989,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test275() throws Throwable {
+    public void test280() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test275");
+            System.out.format("%n%s%n", "RegressionTest0.test280");
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner23 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object[] objArray24 = new java.lang.Object[] { (short) 10, (byte) 100, 1.0d, 1, (-1.0f), 10.0f, (byte) 1, 1, 10.0f, (-1.0d), (short) -1, "hi!", 1.0d, (byte) 1, 1.0f, (short) -1, 10, 10L, false, (byte) -1, (-1L), false, (-1), cleaner23 };
         java.util.LinkedHashSet<java.lang.Object> objSet25 = new java.util.LinkedHashSet<java.lang.Object>();
@@ -6901,16 +7010,16 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test276() throws Throwable {
+    public void test281() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test276");
+            System.out.format("%n%s%n", "RegressionTest0.test281");
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<org.mockito.internal.util.Timer, java.lang.CharSequence> timerWithInlinedExpunction0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<org.mockito.internal.util.Timer, java.lang.CharSequence>();
     }
 
     @Test
-    public void test277() throws Throwable {
+    public void test282() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test277");
+            System.out.format("%n%s%n", "RegressionTest0.test282");
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner1 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet2 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner1);
@@ -6956,9 +7065,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test278() throws Throwable {
+    public void test283() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test278");
+            System.out.format("%n%s%n", "RegressionTest0.test283");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         java.lang.String str2 = weakConcurrentMap0.toString();
@@ -6986,9 +7095,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test279() throws Throwable {
+    public void test284() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test279");
+            System.out.format("%n%s%n", "RegressionTest0.test284");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
@@ -7009,9 +7118,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test280() throws Throwable {
+    public void test285() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test280");
+            System.out.format("%n%s%n", "RegressionTest0.test285");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -7048,9 +7157,26 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test281() throws Throwable {
+    public void test286() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test281");
+            System.out.format("%n%s%n", "RegressionTest0.test286");
+        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
+        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
+        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
+        java.lang.Object obj5 = cleanerEnumWeakConcurrentMap3.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner4);
+        java.lang.Object obj6 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner4);
+        org.mockito.internal.util.concurrent.DetachedThreadLocal<org.mockito.mock.MockName> mockNameDetachedThreadLocal7 = new org.mockito.internal.util.concurrent.DetachedThreadLocal<org.mockito.mock.MockName>(cleaner4);
+        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Thread, org.mockito.mock.MockName> threadWeakConcurrentMap8 = mockNameDetachedThreadLocal7.getBackingMap();
+        org.junit.Assert.assertTrue("'" + cleaner4 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE + "'", cleaner4.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE));
+        org.junit.Assert.assertNull(obj5);
+        org.junit.Assert.assertNull(obj6);
+        org.junit.Assert.assertNotNull(threadWeakConcurrentMap8);
+    }
+
+    @Test
+    public void test287() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test287");
         java.lang.reflect.WildcardType wildcardType0 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
         java.lang.reflect.WildcardType wildcardType2 = wildCardBoundedType1.wildCard();
@@ -7067,9 +7193,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test282() throws Throwable {
+    public void test288() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test282");
+            System.out.format("%n%s%n", "RegressionTest0.test288");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         boolean boolean3 = weakConcurrentMap0.add((java.lang.Object) cleanerEnumWeakConcurrentMap2);
@@ -7084,9 +7210,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test283() throws Throwable {
+    public void test289() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test283");
+            System.out.format("%n%s%n", "RegressionTest0.test289");
         org.mockito.internal.util.Checks checks0 = new org.mockito.internal.util.Checks();
         try {
             org.mockito.invocation.MockHandler<org.mockito.internal.util.Checks> checksMockHandler1 = org.mockito.internal.util.MockUtil.getMockHandler(checks0);
@@ -7096,9 +7222,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test284() throws Throwable {
+    public void test290() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test284");
+            System.out.format("%n%s%n", "RegressionTest0.test290");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         java.util.Iterator<java.lang.Object> objItor2 = weakConcurrentMap0.iterator();
@@ -7120,9 +7246,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test285() throws Throwable {
+    public void test291() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test285");
+            System.out.format("%n%s%n", "RegressionTest0.test291");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable2 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap0, "");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -7150,9 +7276,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test286() throws Throwable {
+    public void test292() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test286");
+            System.out.format("%n%s%n", "RegressionTest0.test292");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool1 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable4 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap2, "");
@@ -7229,9 +7355,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test287() throws Throwable {
+    public void test293() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test287");
+            System.out.format("%n%s%n", "RegressionTest0.test293");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         boolean boolean3 = weakConcurrentMap0.add((java.lang.Object) cleanerEnumWeakConcurrentMap2);
@@ -7259,9 +7385,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test288() throws Throwable {
+    public void test294() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test288");
+            System.out.format("%n%s%n", "RegressionTest0.test294");
         java.lang.Object obj0 = null;
         java.lang.reflect.Field field1 = null;
         try {
@@ -7272,9 +7398,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test289() throws Throwable {
+    public void test295() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test289");
+            System.out.format("%n%s%n", "RegressionTest0.test295");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
@@ -7285,9 +7411,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test290() throws Throwable {
+    public void test296() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test290");
+            System.out.format("%n%s%n", "RegressionTest0.test296");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -7305,9 +7431,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test291() throws Throwable {
+    public void test297() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test291");
+            System.out.format("%n%s%n", "RegressionTest0.test297");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = org.mockito.internal.util.Checks.checkItemsNotNull(weakConcurrentMap0, "hi!");
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner26 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -7338,9 +7464,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test292() throws Throwable {
+    public void test298() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test292");
+            System.out.format("%n%s%n", "RegressionTest0.test298");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) 100L);
         try {
             org.mockito.invocation.MockHandler mockHandler2 = defaultMockingDetails1.getMockHandler();
@@ -7350,9 +7476,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test293() throws Throwable {
+    public void test299() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test293");
+            System.out.format("%n%s%n", "RegressionTest0.test299");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<org.mockito.internal.util.concurrent.WeakConcurrentMap> weakConcurrentMapWeakConcurrentSet2 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<org.mockito.internal.util.concurrent.WeakConcurrentMap>(cleaner0);
@@ -7361,9 +7487,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test294() throws Throwable {
+    public void test300() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test294");
+            System.out.format("%n%s%n", "RegressionTest0.test300");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -7384,9 +7510,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test295() throws Throwable {
+    public void test301() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test295");
+            System.out.format("%n%s%n", "RegressionTest0.test301");
         org.mockito.internal.util.collections.IdentitySet identitySet0 = new org.mockito.internal.util.collections.IdentitySet();
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails2 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) ' ');
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails5 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails2, "", "hi!");
@@ -7402,9 +7528,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test296() throws Throwable {
+    public void test302() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test296");
+            System.out.format("%n%s%n", "RegressionTest0.test302");
         org.mockito.internal.util.collections.ListUtil listUtil2 = new org.mockito.internal.util.collections.ListUtil();
         org.mockito.internal.util.io.IOUtil iOUtil3 = new org.mockito.internal.util.io.IOUtil();
         org.mockito.internal.util.io.IOUtil iOUtil6 = org.mockito.internal.util.Checks.checkNotNull(iOUtil3, "hi!", "hi!");
@@ -7468,9 +7594,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test297() throws Throwable {
+    public void test303() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test297");
+            System.out.format("%n%s%n", "RegressionTest0.test303");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner2 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
@@ -7552,9 +7678,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test298() throws Throwable {
+    public void test304() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test298");
+            System.out.format("%n%s%n", "RegressionTest0.test304");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) ' ');
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails4 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails1, "", "hi!");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails6 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails4, "hi!");
@@ -7571,9 +7697,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test299() throws Throwable {
+    public void test305() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test299");
+            System.out.format("%n%s%n", "RegressionTest0.test305");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) ' ');
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails4 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails1, "", "hi!");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails6 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails4, "hi!");
@@ -7588,9 +7714,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test300() throws Throwable {
+    public void test306() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test300");
+            System.out.format("%n%s%n", "RegressionTest0.test306");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable2 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap0, "");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -7637,9 +7763,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test301() throws Throwable {
+    public void test307() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test301");
+            System.out.format("%n%s%n", "RegressionTest0.test307");
         java.lang.Object obj0 = null;
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails(obj0);
         boolean boolean2 = defaultMockingDetails1.isSpy();
@@ -7651,17 +7777,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test302() throws Throwable {
+    public void test308() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test302");
+            System.out.format("%n%s%n", "RegressionTest0.test308");
         org.mockito.internal.util.Timer timer1 = new org.mockito.internal.util.Timer((long) 18);
         timer1.start();
     }
 
     @Test
-    public void test303() throws Throwable {
+    public void test309() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test303");
+            System.out.format("%n%s%n", "RegressionTest0.test309");
         org.mockito.internal.util.collections.ListUtil listUtil2 = new org.mockito.internal.util.collections.ListUtil();
         org.mockito.internal.util.io.IOUtil iOUtil3 = new org.mockito.internal.util.io.IOUtil();
         org.mockito.internal.util.io.IOUtil iOUtil6 = org.mockito.internal.util.Checks.checkNotNull(iOUtil3, "hi!", "hi!");
@@ -7688,9 +7814,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test304() throws Throwable {
+    public void test310() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test304");
+            System.out.format("%n%s%n", "RegressionTest0.test310");
         java.lang.reflect.WildcardType wildcardType0 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
         org.mockito.internal.util.Checks checks2 = new org.mockito.internal.util.Checks();
@@ -7704,9 +7830,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test305() throws Throwable {
+    public void test311() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test305");
+            System.out.format("%n%s%n", "RegressionTest0.test311");
         java.lang.reflect.WildcardType wildcardType0 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
         org.mockito.internal.util.Checks checks2 = new org.mockito.internal.util.Checks();
@@ -7720,9 +7846,20 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test306() throws Throwable {
+    public void test312() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test306");
+            System.out.format("%n%s%n", "RegressionTest0.test312");
+        org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
+        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
+        org.mockito.internal.util.concurrent.WeakConcurrentSet<org.mockito.internal.util.concurrent.WeakConcurrentMap> weakConcurrentMapWeakConcurrentSet2 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<org.mockito.internal.util.concurrent.WeakConcurrentMap>(cleaner0);
+        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
+        org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE + "'", cleaner0.equals(org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE));
+    }
+
+    @Test
+    public void test313() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test313");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable2 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap0, "");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -7743,9 +7880,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test307() throws Throwable {
+    public void test314() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test307");
+            System.out.format("%n%s%n", "RegressionTest0.test314");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -7769,9 +7906,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test308() throws Throwable {
+    public void test315() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test308");
+            System.out.format("%n%s%n", "RegressionTest0.test315");
         java.lang.Object obj0 = null;
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails(obj0);
         boolean boolean2 = defaultMockingDetails1.isSpy();
@@ -7784,9 +7921,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test309() throws Throwable {
+    public void test316() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test309");
+            System.out.format("%n%s%n", "RegressionTest0.test316");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
@@ -7808,9 +7945,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test310() throws Throwable {
+    public void test317() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test310");
+            System.out.format("%n%s%n", "RegressionTest0.test317");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -7833,9 +7970,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test311() throws Throwable {
+    public void test318() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test311");
+            System.out.format("%n%s%n", "RegressionTest0.test318");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         java.lang.reflect.WildcardType wildcardType1 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType2 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType1);
@@ -7856,18 +7993,18 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test312() throws Throwable {
+    public void test319() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test312");
+            System.out.format("%n%s%n", "RegressionTest0.test319");
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner0 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.MANUAL;
         org.mockito.internal.util.concurrent.DetachedThreadLocal<java.lang.Thread> threadDetachedThreadLocal1 = new org.mockito.internal.util.concurrent.DetachedThreadLocal<java.lang.Thread>(cleaner0);
         org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.MANUAL + "'", cleaner0.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.MANUAL));
     }
 
     @Test
-    public void test313() throws Throwable {
+    public void test320() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test313");
+            System.out.format("%n%s%n", "RegressionTest0.test320");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -7885,9 +8022,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test314() throws Throwable {
+    public void test321() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test314");
+            System.out.format("%n%s%n", "RegressionTest0.test321");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Object obj1 = org.mockito.internal.util.JavaEightUtil.emptyOptionalDouble();
         boolean boolean2 = weakConcurrentMap0.equals(obj1);
@@ -7907,9 +8044,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test315() throws Throwable {
+    public void test322() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test315");
+            System.out.format("%n%s%n", "RegressionTest0.test322");
         org.mockito.internal.util.reflection.FieldInitializationReport fieldInitializationReport3 = new org.mockito.internal.util.reflection.FieldInitializationReport((java.lang.Object) (short) 10, false, false);
         boolean boolean4 = fieldInitializationReport3.fieldWasInitialized();
         java.lang.Object obj5 = fieldInitializationReport3.fieldInstance();
@@ -7920,9 +8057,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test316() throws Throwable {
+    public void test323() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test316");
+            System.out.format("%n%s%n", "RegressionTest0.test323");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool2 = new org.mockito.internal.util.reflection.LenientCopyTool();
@@ -7939,9 +8076,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test317() throws Throwable {
+    public void test324() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test317");
+            System.out.format("%n%s%n", "RegressionTest0.test324");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner2 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
@@ -7997,17 +8134,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test318() throws Throwable {
+    public void test325() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test318");
+            System.out.format("%n%s%n", "RegressionTest0.test325");
         java.lang.String str1 = org.mockito.internal.util.StringUtil.removeFirstLine("<<custom argument matcher><[]>null>");
         org.junit.Assert.assertTrue("'" + str1 + "' != '" + "<<custom argument matcher><[]>null>" + "'", str1.equals("<<custom argument matcher><[]>null>"));
     }
 
     @Test
-    public void test319() throws Throwable {
+    public void test326() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test319");
+            System.out.format("%n%s%n", "RegressionTest0.test326");
         org.mockito.internal.util.io.IOUtil iOUtil0 = new org.mockito.internal.util.io.IOUtil();
         org.mockito.internal.util.io.IOUtil iOUtil3 = org.mockito.internal.util.Checks.checkNotNull(iOUtil0, "hi!", "hi!");
         org.mockito.internal.util.io.IOUtil iOUtil6 = org.mockito.internal.util.Checks.checkNotNull(iOUtil0, "hi!", "class org.mockito.internal.util.concurrent.WeakConcurrentMap");
@@ -8016,9 +8153,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test320() throws Throwable {
+    public void test327() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test320");
+            System.out.format("%n%s%n", "RegressionTest0.test327");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
@@ -8039,9 +8176,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test321() throws Throwable {
+    public void test328() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test321");
+            System.out.format("%n%s%n", "RegressionTest0.test328");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool2 = new org.mockito.internal.util.reflection.LenientCopyTool();
@@ -8163,9 +8300,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test322() throws Throwable {
+    public void test329() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test322");
+            System.out.format("%n%s%n", "RegressionTest0.test329");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray2 = new org.mockito.internal.util.reflection.InstanceField[] {};
@@ -8186,9 +8323,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test323() throws Throwable {
+    public void test330() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test323");
+            System.out.format("%n%s%n", "RegressionTest0.test330");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         weakConcurrentMap0.clear();
@@ -8198,9 +8335,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test324() throws Throwable {
+    public void test331() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test324");
+            System.out.format("%n%s%n", "RegressionTest0.test331");
         org.mockito.internal.util.reflection.AccessibilityChanger accessibilityChanger0 = new org.mockito.internal.util.reflection.AccessibilityChanger();
         java.lang.reflect.AccessibleObject accessibleObject1 = null;
         accessibilityChanger0.safelyDisableAccess(accessibleObject1);
@@ -8213,9 +8350,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test325() throws Throwable {
+    public void test332() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test325");
+            System.out.format("%n%s%n", "RegressionTest0.test332");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray2 = new org.mockito.internal.util.reflection.InstanceField[] {};
@@ -8238,9 +8375,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test326() throws Throwable {
+    public void test333() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test326");
+            System.out.format("%n%s%n", "RegressionTest0.test333");
         java.lang.Object obj0 = null;
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails(obj0);
         java.lang.Object obj2 = defaultMockingDetails1.getMock();
@@ -8253,9 +8390,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test327() throws Throwable {
+    public void test334() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test327");
+            System.out.format("%n%s%n", "RegressionTest0.test334");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
@@ -8274,9 +8411,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test328() throws Throwable {
+    public void test335() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test328");
+            System.out.format("%n%s%n", "RegressionTest0.test335");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray2 = new org.mockito.internal.util.reflection.InstanceField[] {};
@@ -8298,9 +8435,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test329() throws Throwable {
+    public void test336() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test329");
+            System.out.format("%n%s%n", "RegressionTest0.test336");
         java.lang.reflect.WildcardType wildcardType0 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
         java.lang.reflect.WildcardType wildcardType2 = wildCardBoundedType1.wildCard();
@@ -8317,9 +8454,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test330() throws Throwable {
+    public void test337() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test330");
+            System.out.format("%n%s%n", "RegressionTest0.test337");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -8347,9 +8484,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test331() throws Throwable {
+    public void test338() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test331");
+            System.out.format("%n%s%n", "RegressionTest0.test338");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable2 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap0, "");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -8398,9 +8535,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test332() throws Throwable {
+    public void test339() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test332");
+            System.out.format("%n%s%n", "RegressionTest0.test339");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -8420,9 +8557,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test333() throws Throwable {
+    public void test340() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test333");
+            System.out.format("%n%s%n", "RegressionTest0.test340");
         java.io.File file1 = null;
         try {
             org.mockito.internal.util.io.IOUtil.writeText("class org.mockito.internal.util.concurrent.WeakConcurrentMap", file1);
@@ -8432,9 +8569,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test334() throws Throwable {
+    public void test341() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test334");
+            System.out.format("%n%s%n", "RegressionTest0.test341");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
@@ -8450,9 +8587,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test335() throws Throwable {
+    public void test342() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test335");
+            System.out.format("%n%s%n", "RegressionTest0.test342");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -8466,16 +8603,16 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test336() throws Throwable {
+    public void test343() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test336");
+            System.out.format("%n%s%n", "RegressionTest0.test343");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
         boolean boolean5 = strWeakConcurrentSet1.contains("hi!");
         strWeakConcurrentSet1.clear();
         strWeakConcurrentSet1.expungeStaleEntries();
-        boolean boolean9 = strWeakConcurrentSet1.contains("[]10.0\n1.0\n1\n100\n10\nINLINE\n-1\n10\n1.0\n-1.0\nfalse\nhi!\n-1\n-1.0\n-1\n10\n1\n-1");
+        boolean boolean9 = strWeakConcurrentSet1.contains("[]10\n1\n1\n1.0\nfalse\n-1\n10\n100\nINLINE\nhi!\n-1\n10\n-1\n1.0\n-1.0\n10.0\n-1.0\n-1");
         org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE + "'", cleaner0.equals(org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE));
         org.junit.Assert.assertNotNull(strWeakConcurrentSet3);
         org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
@@ -8483,9 +8620,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test337() throws Throwable {
+    public void test344() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test337");
+            System.out.format("%n%s%n", "RegressionTest0.test344");
         org.mockito.internal.util.reflection.FieldCopier fieldCopier0 = new org.mockito.internal.util.reflection.FieldCopier();
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner24 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object[] objArray25 = new java.lang.Object[] { (short) 10, (byte) 100, 1.0d, 1, (-1.0f), 10.0f, (byte) 1, 1, 10.0f, (-1.0d), (short) -1, "hi!", 1.0d, (byte) 1, 1.0f, (short) -1, 10, 10L, false, (byte) -1, (-1L), false, (-1), cleaner24 };
@@ -8518,9 +8655,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test338() throws Throwable {
+    public void test345() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test338");
+            System.out.format("%n%s%n", "RegressionTest0.test345");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable3 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap1, "");
@@ -8570,9 +8707,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test339() throws Throwable {
+    public void test346() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test339");
+            System.out.format("%n%s%n", "RegressionTest0.test346");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -8595,7 +8732,7 @@ public class RegressionTest0 {
         boolean boolean23 = mockNameImpl20.isDefault();
         boolean boolean24 = hashCodeAndEqualsMockWrapper18.equals((java.lang.Object) mockNameImpl20);
         try {
-            org.mockito.internal.util.MockUtil.maybeRedefineMockName((java.lang.Object) boolean24, "[]10.0\n1.0\n1\n100\n10\nINLINE\n-1\n10\n1.0\n-1.0\nfalse\nhi!\n-1\n-1.0\n-1\n10\n1\n-1");
+            org.mockito.internal.util.MockUtil.maybeRedefineMockName((java.lang.Object) boolean24, "[]10\n1\n1\n1.0\nfalse\n-1\n10\n100\nINLINE\nhi!\n-1\n10\n-1\n1.0\n-1.0\n10.0\n-1.0\n-1");
             org.junit.Assert.fail("Expected exception of type java.lang.IllegalStateException; message: Could not initialize plugin: interface org.mockito.plugins.MockMaker (alternate: null)");
         } catch (java.lang.IllegalStateException e) {
         }
@@ -8619,18 +8756,18 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test340() throws Throwable {
+    public void test347() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test340");
+            System.out.format("%n%s%n", "RegressionTest0.test347");
         org.mockito.internal.util.reflection.FieldInitializationReport fieldInitializationReport3 = new org.mockito.internal.util.reflection.FieldInitializationReport((java.lang.Object) (short) 10, false, false);
         java.lang.Object obj4 = fieldInitializationReport3.fieldInstance();
         org.junit.Assert.assertTrue("'" + obj4 + "' != '" + (short) 10 + "'", obj4.equals((short) 10));
     }
 
     @Test
-    public void test341() throws Throwable {
+    public void test348() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test341");
+            System.out.format("%n%s%n", "RegressionTest0.test348");
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner23 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object[] objArray24 = new java.lang.Object[] { (short) 10, (byte) 100, 1.0d, 1, (-1.0f), 10.0f, (byte) 1, 1, 10.0f, (-1.0d), (short) -1, "hi!", 1.0d, (byte) 1, 1.0f, (short) -1, 10, 10L, false, (byte) -1, (-1L), false, (-1), cleaner23 };
         java.util.LinkedHashSet<java.lang.Object> objSet25 = new java.util.LinkedHashSet<java.lang.Object>();
@@ -8716,9 +8853,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test342() throws Throwable {
+    public void test349() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test342");
+            System.out.format("%n%s%n", "RegressionTest0.test349");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable2 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap0, "");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -8736,9 +8873,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test343() throws Throwable {
+    public void test350() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test343");
+            System.out.format("%n%s%n", "RegressionTest0.test350");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner2 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
@@ -8855,9 +8992,26 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test344() throws Throwable {
+    public void test351() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test344");
+            System.out.format("%n%s%n", "RegressionTest0.test351");
+        org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
+        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
+        boolean boolean3 = weakConcurrentMap0.add((java.lang.Object) cleanerEnumWeakConcurrentMap2);
+        org.mockito.internal.util.collections.HashCodeAndEqualsMockWrapper hashCodeAndEqualsMockWrapper4 = new org.mockito.internal.util.collections.HashCodeAndEqualsMockWrapper((java.lang.Object) weakConcurrentMap0);
+        java.util.Spliterator<java.lang.Object> objSpliterator5 = weakConcurrentMap0.spliterator();
+        java.util.stream.Stream<java.lang.Object> objStream6 = weakConcurrentMap0.stream();
+        java.util.stream.Stream<java.lang.Object> objStream8 = org.mockito.internal.util.Checks.checkNotNull(objStream6, "[]");
+        org.junit.Assert.assertTrue("'" + boolean3 + "' != '" + true + "'", boolean3 == true);
+        org.junit.Assert.assertNotNull(objSpliterator5);
+        org.junit.Assert.assertNotNull(objStream6);
+        org.junit.Assert.assertNotNull(objStream8);
+    }
+
+    @Test
+    public void test352() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test352");
         java.lang.reflect.Field field0 = null;
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable3 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap1, "");
@@ -8880,17 +9034,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test345() throws Throwable {
+    public void test353() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test345");
+            System.out.format("%n%s%n", "RegressionTest0.test353");
         java.lang.String str1 = org.mockito.internal.util.StringUtil.removeFirstLine("\n[]");
         org.junit.Assert.assertTrue("'" + str1 + "' != '" + "[]" + "'", str1.equals("[]"));
     }
 
     @Test
-    public void test346() throws Throwable {
+    public void test354() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test346");
+            System.out.format("%n%s%n", "RegressionTest0.test354");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable2 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap0, "");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -8916,9 +9070,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test347() throws Throwable {
+    public void test355() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test347");
+            System.out.format("%n%s%n", "RegressionTest0.test355");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         boolean boolean3 = weakConcurrentMap0.add((java.lang.Object) cleanerEnumWeakConcurrentMap2);
@@ -8935,9 +9089,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test348() throws Throwable {
+    public void test356() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test348");
+            System.out.format("%n%s%n", "RegressionTest0.test356");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = org.mockito.internal.util.Checks.checkItemsNotNull(weakConcurrentMap0, "hi!");
         int int3 = weakConcurrentMap2.size();
@@ -8948,9 +9102,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test349() throws Throwable {
+    public void test357() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test349");
+            System.out.format("%n%s%n", "RegressionTest0.test357");
         org.mockito.internal.util.MockCreationValidator mockCreationValidator0 = new org.mockito.internal.util.MockCreationValidator();
         org.mockito.mock.SerializableMode serializableMode2 = null;
         mockCreationValidator0.validateConstructorUse(false, serializableMode2);
@@ -8961,9 +9115,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test350() throws Throwable {
+    public void test358() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test350");
+            System.out.format("%n%s%n", "RegressionTest0.test358");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         java.util.Iterator<java.lang.Object> objItor2 = weakConcurrentMap0.iterator();
@@ -8990,9 +9144,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test351() throws Throwable {
+    public void test359() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test351");
+            System.out.format("%n%s%n", "RegressionTest0.test359");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -9036,9 +9190,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test352() throws Throwable {
+    public void test360() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test352");
+            System.out.format("%n%s%n", "RegressionTest0.test360");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner2 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
@@ -9094,25 +9248,25 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test353() throws Throwable {
+    public void test361() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test353");
+            System.out.format("%n%s%n", "RegressionTest0.test361");
         org.mockito.internal.util.Timer timer1 = new org.mockito.internal.util.Timer(0L);
     }
 
     @Test
-    public void test354() throws Throwable {
+    public void test362() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test354");
+            System.out.format("%n%s%n", "RegressionTest0.test362");
         java.lang.Object obj0 = null;
         java.lang.reflect.Field field1 = null;
         org.mockito.internal.util.reflection.BeanPropertySetter beanPropertySetter2 = new org.mockito.internal.util.reflection.BeanPropertySetter(obj0, field1);
     }
 
     @Test
-    public void test355() throws Throwable {
+    public void test363() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test355");
+            System.out.format("%n%s%n", "RegressionTest0.test363");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         java.util.Iterator<java.lang.Object> objItor2 = weakConcurrentMap0.iterator();
@@ -9148,9 +9302,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test356() throws Throwable {
+    public void test364() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test356");
+            System.out.format("%n%s%n", "RegressionTest0.test364");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.reflection.FieldInitializationReport fieldInitializationReport4 = new org.mockito.internal.util.reflection.FieldInitializationReport((java.lang.Object) cleanerEnumWeakConcurrentMap1, false, true);
         boolean boolean5 = fieldInitializationReport4.fieldWasInitialized();
@@ -9162,9 +9316,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test357() throws Throwable {
+    public void test365() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test357");
+            System.out.format("%n%s%n", "RegressionTest0.test365");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool2 = new org.mockito.internal.util.reflection.LenientCopyTool();
@@ -9208,9 +9362,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test358() throws Throwable {
+    public void test366() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test358");
+            System.out.format("%n%s%n", "RegressionTest0.test366");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner2 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
@@ -9324,9 +9478,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test359() throws Throwable {
+    public void test367() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test359");
+            System.out.format("%n%s%n", "RegressionTest0.test367");
         org.mockito.internal.util.collections.IdentitySet identitySet0 = new org.mockito.internal.util.collections.IdentitySet();
         org.mockito.internal.util.collections.IdentitySet identitySet1 = new org.mockito.internal.util.collections.IdentitySet();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
@@ -9384,9 +9538,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test360() throws Throwable {
+    public void test368() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test360");
+            System.out.format("%n%s%n", "RegressionTest0.test368");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Object obj1 = org.mockito.internal.util.JavaEightUtil.emptyOptionalDouble();
         boolean boolean2 = weakConcurrentMap0.equals(obj1);
@@ -9443,9 +9597,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test361() throws Throwable {
+    public void test369() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test361");
+            System.out.format("%n%s%n", "RegressionTest0.test369");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         boolean boolean3 = weakConcurrentMap0.add((java.lang.Object) cleanerEnumWeakConcurrentMap2);
@@ -9457,9 +9611,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test362() throws Throwable {
+    public void test370() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test362");
+            System.out.format("%n%s%n", "RegressionTest0.test370");
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner23 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object[] objArray24 = new java.lang.Object[] { (short) 10, (byte) 100, 1.0d, 1, (-1.0f), 10.0f, (byte) 1, 1, 10.0f, (-1.0d), (short) -1, "hi!", 1.0d, (byte) 1, 1.0f, (short) -1, 10, 10L, false, (byte) -1, (-1L), false, (-1), cleaner23 };
         java.util.LinkedHashSet<java.lang.Object> objSet25 = new java.util.LinkedHashSet<java.lang.Object>();
@@ -9531,9 +9685,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test363() throws Throwable {
+    public void test371() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test363");
+            System.out.format("%n%s%n", "RegressionTest0.test371");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -9548,9 +9702,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test364() throws Throwable {
+    public void test372() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test364");
+            System.out.format("%n%s%n", "RegressionTest0.test372");
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner23 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object[] objArray24 = new java.lang.Object[] { (short) 10, (byte) 100, 1.0d, 1, (-1.0f), 10.0f, (byte) 1, 1, 10.0f, (-1.0d), (short) -1, "hi!", 1.0d, (byte) 1, 1.0f, (short) -1, 10, 10L, false, (byte) -1, (-1L), false, (-1), cleaner23 };
         java.util.LinkedHashSet<java.lang.Object> objSet25 = new java.util.LinkedHashSet<java.lang.Object>();
@@ -9576,16 +9730,16 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test365() throws Throwable {
+    public void test373() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test365");
+            System.out.format("%n%s%n", "RegressionTest0.test373");
         org.mockito.internal.util.MockNameImpl mockNameImpl1 = new org.mockito.internal.util.MockNameImpl("\n[]");
     }
 
     @Test
-    public void test366() throws Throwable {
+    public void test374() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test366");
+            System.out.format("%n%s%n", "RegressionTest0.test374");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable3 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap1, "");
@@ -9686,9 +9840,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test367() throws Throwable {
+    public void test375() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test367");
+            System.out.format("%n%s%n", "RegressionTest0.test375");
         java.lang.reflect.WildcardType wildcardType0 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
         java.lang.reflect.WildcardType wildcardType2 = wildCardBoundedType1.wildCard();
@@ -9703,9 +9857,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test368() throws Throwable {
+    public void test376() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test368");
+            System.out.format("%n%s%n", "RegressionTest0.test376");
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner1 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet2 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner1);
@@ -9841,16 +9995,16 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test369() throws Throwable {
+    public void test377() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test369");
+            System.out.format("%n%s%n", "RegressionTest0.test377");
         org.mockito.internal.util.Timer timer1 = new org.mockito.internal.util.Timer((long) (byte) 10);
     }
 
     @Test
-    public void test370() throws Throwable {
+    public void test378() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test370");
+            System.out.format("%n%s%n", "RegressionTest0.test378");
         java.lang.reflect.WildcardType wildcardType0 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
         java.lang.reflect.WildcardType wildcardType2 = wildCardBoundedType1.wildCard();
@@ -9883,9 +10037,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test371() throws Throwable {
+    public void test379() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test371");
+            System.out.format("%n%s%n", "RegressionTest0.test379");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -9911,9 +10065,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test372() throws Throwable {
+    public void test380() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test372");
+            System.out.format("%n%s%n", "RegressionTest0.test380");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool2 = new org.mockito.internal.util.reflection.LenientCopyTool();
@@ -9957,9 +10111,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test373() throws Throwable {
+    public void test381() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test373");
+            System.out.format("%n%s%n", "RegressionTest0.test381");
         org.mockito.internal.util.collections.IdentitySet identitySet0 = new org.mockito.internal.util.collections.IdentitySet();
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails2 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) ' ');
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails5 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails2, "", "hi!");
@@ -9975,9 +10129,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test374() throws Throwable {
+    public void test382() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test374");
+            System.out.format("%n%s%n", "RegressionTest0.test382");
         org.mockito.internal.util.collections.IdentitySet identitySet0 = new org.mockito.internal.util.collections.IdentitySet();
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails2 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) ' ');
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails5 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails2, "", "hi!");
@@ -9990,9 +10144,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test375() throws Throwable {
+    public void test383() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test375");
+            System.out.format("%n%s%n", "RegressionTest0.test383");
         org.mockito.internal.util.reflection.FieldInitializationReport fieldInitializationReport3 = new org.mockito.internal.util.reflection.FieldInitializationReport((java.lang.Object) (short) 10, false, false);
         boolean boolean4 = fieldInitializationReport3.fieldWasInitialized();
         boolean boolean5 = fieldInitializationReport3.fieldWasInitializedUsingContructorArgs();
@@ -10001,9 +10155,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test376() throws Throwable {
+    public void test384() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test376");
+            System.out.format("%n%s%n", "RegressionTest0.test384");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -10022,16 +10176,16 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test377() throws Throwable {
+    public void test385() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test377");
+            System.out.format("%n%s%n", "RegressionTest0.test385");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
         boolean boolean5 = strWeakConcurrentSet1.contains("hi!");
         strWeakConcurrentSet1.clear();
         java.util.Iterator<java.lang.String> strItor7 = strWeakConcurrentSet1.iterator();
-        boolean boolean9 = strWeakConcurrentSet1.add("[]10.0\n1.0\n1\n100\n10\nINLINE\n-1\n10\n1.0\n-1.0\nfalse\nhi!\n-1\n-1.0\n-1\n10\n1\n-1");
+        boolean boolean9 = strWeakConcurrentSet1.add("[]10\n1\n1\n1.0\nfalse\n-1\n10\n100\nINLINE\nhi!\n-1\n10\n-1\n1.0\n-1.0\n10.0\n-1.0\n-1");
         org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE + "'", cleaner0.equals(org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE));
         org.junit.Assert.assertNotNull(strWeakConcurrentSet3);
         org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
@@ -10040,9 +10194,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test378() throws Throwable {
+    public void test386() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test378");
+            System.out.format("%n%s%n", "RegressionTest0.test386");
         org.mockito.internal.util.Timer timer1 = new org.mockito.internal.util.Timer((long) 18);
         boolean boolean2 = timer1.isCounting();
         long long3 = timer1.duration();
@@ -10051,9 +10205,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test379() throws Throwable {
+    public void test387() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test379");
+            System.out.format("%n%s%n", "RegressionTest0.test387");
         org.mockito.internal.util.collections.IdentitySet identitySet0 = new org.mockito.internal.util.collections.IdentitySet();
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails2 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) ' ');
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails5 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails2, "", "hi!");
@@ -10069,9 +10223,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test380() throws Throwable {
+    public void test388() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test380");
+            System.out.format("%n%s%n", "RegressionTest0.test388");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.reflection.FieldInitializationReport fieldInitializationReport4 = new org.mockito.internal.util.reflection.FieldInitializationReport((java.lang.Object) cleanerEnumWeakConcurrentMap1, false, true);
         boolean boolean5 = fieldInitializationReport4.fieldWasInitialized();
@@ -10085,9 +10239,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test381() throws Throwable {
+    public void test389() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test381");
+            System.out.format("%n%s%n", "RegressionTest0.test389");
         java.lang.reflect.WildcardType wildcardType0 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
         java.lang.reflect.WildcardType wildcardType2 = wildCardBoundedType1.wildCard();
@@ -10142,16 +10296,16 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test382() throws Throwable {
+    public void test390() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test382");
+            System.out.format("%n%s%n", "RegressionTest0.test390");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.AutoCloseable, java.lang.Thread> autoCloseableWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.AutoCloseable, java.lang.Thread>(false);
     }
 
     @Test
-    public void test383() throws Throwable {
+    public void test391() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test383");
+            System.out.format("%n%s%n", "RegressionTest0.test391");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool2 = new org.mockito.internal.util.reflection.LenientCopyTool();
@@ -10172,9 +10326,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test384() throws Throwable {
+    public void test392() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test384");
+            System.out.format("%n%s%n", "RegressionTest0.test392");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner2 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
@@ -10314,18 +10468,18 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test385() throws Throwable {
+    public void test393() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test385");
+            System.out.format("%n%s%n", "RegressionTest0.test393");
         org.mockito.internal.util.MockNameImpl mockNameImpl1 = new org.mockito.internal.util.MockNameImpl("<<custom argument matcher><[]>null>");
         java.lang.String str2 = mockNameImpl1.toString();
         org.junit.Assert.assertTrue("'" + str2 + "' != '" + "<<custom argument matcher><[]>null>" + "'", str2.equals("<<custom argument matcher><[]>null>"));
     }
 
     @Test
-    public void test386() throws Throwable {
+    public void test394() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test386");
+            System.out.format("%n%s%n", "RegressionTest0.test394");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -10369,9 +10523,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test387() throws Throwable {
+    public void test395() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test387");
+            System.out.format("%n%s%n", "RegressionTest0.test395");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = org.mockito.internal.util.Checks.checkItemsNotNull(weakConcurrentMap0, "hi!");
         int int3 = weakConcurrentMap2.size();
@@ -10394,9 +10548,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test388() throws Throwable {
+    public void test396() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test388");
+            System.out.format("%n%s%n", "RegressionTest0.test396");
         org.mockito.internal.util.collections.IdentitySet identitySet0 = new org.mockito.internal.util.collections.IdentitySet();
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -10450,9 +10604,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test389() throws Throwable {
+    public void test397() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test389");
+            System.out.format("%n%s%n", "RegressionTest0.test397");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool1 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable4 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap2, "");
@@ -10526,9 +10680,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test390() throws Throwable {
+    public void test398() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test390");
+            System.out.format("%n%s%n", "RegressionTest0.test398");
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner23 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object[] objArray24 = new java.lang.Object[] { (short) 10, (byte) 100, 1.0d, 1, (-1.0f), 10.0f, (byte) 1, 1, 10.0f, (-1.0d), (short) -1, "hi!", 1.0d, (byte) 1, 1.0f, (short) -1, 10, 10L, false, (byte) -1, (-1L), false, (-1), cleaner23 };
         java.util.LinkedHashSet<java.lang.Object> objSet25 = new java.util.LinkedHashSet<java.lang.Object>();
@@ -10543,13 +10697,13 @@ public class RegressionTest0 {
         org.junit.Assert.assertTrue("'" + boolean26 + "' != '" + true + "'", boolean26 == true);
         org.junit.Assert.assertNotNull(objSpliterator27);
         org.junit.Assert.assertNotNull(weakConcurrentMap28);
-        org.junit.Assert.assertTrue("'" + obj29 + "' != '" + 10.0f + "'", obj29.equals(10.0f));
+        org.junit.Assert.assertTrue("'" + obj29 + "' != '" + (short) 10 + "'", obj29.equals((short) 10));
     }
 
     @Test
-    public void test391() throws Throwable {
+    public void test399() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test391");
+            System.out.format("%n%s%n", "RegressionTest0.test399");
         java.lang.Object obj0 = null;
         try {
             org.mockito.internal.stubbing.InvocationContainerImpl invocationContainerImpl1 = org.mockito.internal.util.MockUtil.getInvocationContainer(obj0);
@@ -10559,9 +10713,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test392() throws Throwable {
+    public void test400() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test392");
+            System.out.format("%n%s%n", "RegressionTest0.test400");
         java.lang.reflect.WildcardType wildcardType0 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
         java.lang.reflect.WildcardType wildcardType2 = wildCardBoundedType1.wildCard();
@@ -10597,9 +10751,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test393() throws Throwable {
+    public void test401() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test393");
+            System.out.format("%n%s%n", "RegressionTest0.test401");
         java.lang.Object obj0 = null;
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails(obj0);
         boolean boolean2 = defaultMockingDetails1.isSpy();
@@ -10614,9 +10768,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test394() throws Throwable {
+    public void test402() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test394");
+            System.out.format("%n%s%n", "RegressionTest0.test402");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner2 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
@@ -10701,9 +10855,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test395() throws Throwable {
+    public void test403() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test395");
+            System.out.format("%n%s%n", "RegressionTest0.test403");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.reflection.FieldInitializationReport fieldInitializationReport4 = new org.mockito.internal.util.reflection.FieldInitializationReport((java.lang.Object) cleanerEnumWeakConcurrentMap1, false, true);
         boolean boolean5 = fieldInitializationReport4.fieldWasInitialized();
@@ -10720,9 +10874,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test396() throws Throwable {
+    public void test404() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test396");
+            System.out.format("%n%s%n", "RegressionTest0.test404");
         org.mockito.internal.util.Primitives primitives0 = new org.mockito.internal.util.Primitives();
         org.mockito.internal.util.reflection.FieldInitializationReport fieldInitializationReport3 = new org.mockito.internal.util.reflection.FieldInitializationReport((java.lang.Object) primitives0, false, false);
         boolean boolean4 = fieldInitializationReport3.fieldWasInitialized();
@@ -10734,9 +10888,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test397() throws Throwable {
+    public void test405() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test397");
+            System.out.format("%n%s%n", "RegressionTest0.test405");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool2 = new org.mockito.internal.util.reflection.LenientCopyTool();
@@ -10778,9 +10932,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test398() throws Throwable {
+    public void test406() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test398");
+            System.out.format("%n%s%n", "RegressionTest0.test406");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable2 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap0, "");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -10804,9 +10958,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test399() throws Throwable {
+    public void test407() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test399");
+            System.out.format("%n%s%n", "RegressionTest0.test407");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -10827,9 +10981,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test400() throws Throwable {
+    public void test408() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test400");
+            System.out.format("%n%s%n", "RegressionTest0.test408");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool2 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable5 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap3, "");
@@ -10887,9 +11041,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test401() throws Throwable {
+    public void test409() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test401");
+            System.out.format("%n%s%n", "RegressionTest0.test409");
         org.mockito.internal.util.ConsoleMockitoLogger consoleMockitoLogger0 = new org.mockito.internal.util.ConsoleMockitoLogger();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -10908,9 +11062,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test402() throws Throwable {
+    public void test410() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test402");
+            System.out.format("%n%s%n", "RegressionTest0.test410");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -10922,9 +11076,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test403() throws Throwable {
+    public void test411() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test403");
+            System.out.format("%n%s%n", "RegressionTest0.test411");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray2 = new org.mockito.internal.util.reflection.InstanceField[] {};
@@ -10948,9 +11102,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test404() throws Throwable {
+    public void test412() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test404");
+            System.out.format("%n%s%n", "RegressionTest0.test412");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -10968,9 +11122,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test405() throws Throwable {
+    public void test413() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test405");
+            System.out.format("%n%s%n", "RegressionTest0.test413");
         java.io.File file1 = null;
         try {
             org.mockito.internal.util.io.IOUtil.writeText("\n[]", file1);
@@ -10980,9 +11134,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test406() throws Throwable {
+    public void test414() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test406");
+            System.out.format("%n%s%n", "RegressionTest0.test414");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
@@ -10998,9 +11152,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test407() throws Throwable {
+    public void test415() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test407");
+            System.out.format("%n%s%n", "RegressionTest0.test415");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -11021,9 +11175,32 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test408() throws Throwable {
+    public void test416() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test408");
+            System.out.format("%n%s%n", "RegressionTest0.test416");
+        org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
+        org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray1 = new org.mockito.internal.util.reflection.InstanceField[] {};
+        java.util.ArrayList<org.mockito.internal.util.reflection.InstanceField> instanceFieldList2 = new java.util.ArrayList<org.mockito.internal.util.reflection.InstanceField>();
+        boolean boolean3 = java.util.Collections.addAll((java.util.Collection<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList2, instanceFieldArray1);
+        boolean boolean4 = instanceFieldListWithInlinedExpunction0.containsKey((java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList2);
+        org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray5 = new org.mockito.internal.util.reflection.InstanceField[] {};
+        java.util.ArrayList<org.mockito.internal.util.reflection.InstanceField> instanceFieldList6 = new java.util.ArrayList<org.mockito.internal.util.reflection.InstanceField>();
+        boolean boolean7 = java.util.Collections.addAll((java.util.Collection<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList6, instanceFieldArray5);
+        java.util.AbstractSequentialList<java.lang.Object> objList8 = instanceFieldListWithInlinedExpunction0.get((java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList6);
+        java.util.Iterator<java.util.Map.Entry<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>> instanceFieldListEntryItor9 = instanceFieldListWithInlinedExpunction0.iterator();
+        org.junit.Assert.assertNotNull(instanceFieldArray1);
+        org.junit.Assert.assertTrue("'" + boolean3 + "' != '" + false + "'", boolean3 == false);
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
+        org.junit.Assert.assertNotNull(instanceFieldArray5);
+        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
+        org.junit.Assert.assertNull(objList8);
+        org.junit.Assert.assertNotNull(instanceFieldListEntryItor9);
+    }
+
+    @Test
+    public void test417() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test417");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
@@ -11047,9 +11224,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test409() throws Throwable {
+    public void test418() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test409");
+            System.out.format("%n%s%n", "RegressionTest0.test418");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor1 = weakConcurrentMap0.iterator();
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool2 = new org.mockito.internal.util.reflection.LenientCopyTool();
@@ -11068,9 +11245,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test410() throws Throwable {
+    public void test419() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test410");
+            System.out.format("%n%s%n", "RegressionTest0.test419");
         org.mockito.internal.util.collections.IdentitySet identitySet0 = new org.mockito.internal.util.collections.IdentitySet();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.util.Iterator<java.lang.Object> objItor2 = weakConcurrentMap1.iterator();
@@ -11123,9 +11300,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test411() throws Throwable {
+    public void test420() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test411");
+            System.out.format("%n%s%n", "RegressionTest0.test420");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -11161,9 +11338,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test412() throws Throwable {
+    public void test421() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test412");
+            System.out.format("%n%s%n", "RegressionTest0.test421");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
@@ -11177,9 +11354,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test413() throws Throwable {
+    public void test422() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test413");
+            System.out.format("%n%s%n", "RegressionTest0.test422");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Object obj3 = org.mockito.internal.util.JavaEightUtil.emptyOptionalDouble();
         boolean boolean4 = weakConcurrentMap2.equals(obj3);
@@ -11205,24 +11382,24 @@ public class RegressionTest0 {
         org.junit.Assert.assertTrue("'" + boolean37 + "' != '" + false + "'", boolean37 == false);
         org.junit.Assert.assertNotNull(weakConcurrentMap38);
         org.junit.Assert.assertNotNull(objStream39);
-        org.junit.Assert.assertTrue("'" + str40 + "' != '" + "<<custom argument matcher><[]>null>[]10.0\n[]1.0\n[]1\n[]100\n[]10\n[]INLINE\n[]-1\n[]10\n[]1.0\n[]-1.0\n[]false\n[]hi!\n[]-1\n[]-1.0\n[]-1\n[]10\n[]1\n[]-1" + "'", str40.equals("<<custom argument matcher><[]>null>[]10.0\n[]1.0\n[]1\n[]100\n[]10\n[]INLINE\n[]-1\n[]10\n[]1.0\n[]-1.0\n[]false\n[]hi!\n[]-1\n[]-1.0\n[]-1\n[]10\n[]1\n[]-1"));
+        org.junit.Assert.assertTrue("'" + str40 + "' != '" + "<<custom argument matcher><[]>null>[]10\n[]1\n[]1\n[]1.0\n[]false\n[]-1\n[]10\n[]100\n[]INLINE\n[]hi!\n[]-1\n[]10\n[]-1\n[]1.0\n[]-1.0\n[]10.0\n[]-1.0\n[]-1" + "'", str40.equals("<<custom argument matcher><[]>null>[]10\n[]1\n[]1\n[]1.0\n[]false\n[]-1\n[]10\n[]100\n[]INLINE\n[]hi!\n[]-1\n[]10\n[]-1\n[]1.0\n[]-1.0\n[]10.0\n[]-1.0\n[]-1"));
     }
 
     @Test
-    public void test414() throws Throwable {
+    public void test423() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test414");
+            System.out.format("%n%s%n", "RegressionTest0.test423");
         try {
-            org.mockito.internal.util.MockUtil.resetMock("[]10.0\n1.0\n1\n100\n10\nINLINE\n-1\n10\n1.0\n-1.0\nfalse\nhi!\n-1\n-1.0\n-1\n10\n1\n-1");
+            org.mockito.internal.util.MockUtil.resetMock("[]10\n1\n1\n1.0\nfalse\n-1\n10\n100\nINLINE\nhi!\n-1\n10\n-1\n1.0\n-1.0\n10.0\n-1.0\n-1");
             org.junit.Assert.fail("Expected exception of type java.lang.IllegalStateException; message: Could not initialize plugin: interface org.mockito.plugins.MockMaker (alternate: null)");
         } catch (java.lang.IllegalStateException e) {
         }
     }
 
     @Test
-    public void test415() throws Throwable {
+    public void test424() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test415");
+            System.out.format("%n%s%n", "RegressionTest0.test424");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray2 = new org.mockito.internal.util.reflection.InstanceField[] {};
@@ -11240,9 +11417,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test416() throws Throwable {
+    public void test425() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test416");
+            System.out.format("%n%s%n", "RegressionTest0.test425");
         org.mockito.internal.util.MockCreationValidator mockCreationValidator0 = new org.mockito.internal.util.MockCreationValidator();
         org.mockito.mock.SerializableMode serializableMode2 = null;
         mockCreationValidator0.validateConstructorUse(false, serializableMode2);
@@ -11251,9 +11428,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test417() throws Throwable {
+    public void test426() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test417");
+            System.out.format("%n%s%n", "RegressionTest0.test426");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray2 = new org.mockito.internal.util.reflection.InstanceField[] {};
@@ -11276,9 +11453,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test418() throws Throwable {
+    public void test427() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test418");
+            System.out.format("%n%s%n", "RegressionTest0.test427");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<org.mockito.internal.util.concurrent.WeakConcurrentMap> weakConcurrentMapWeakConcurrentSet2 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<org.mockito.internal.util.concurrent.WeakConcurrentMap>(cleaner0);
@@ -11287,9 +11464,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test419() throws Throwable {
+    public void test428() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test419");
+            System.out.format("%n%s%n", "RegressionTest0.test428");
         org.mockito.internal.util.reflection.FieldCopier fieldCopier0 = new org.mockito.internal.util.reflection.FieldCopier();
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
@@ -11345,9 +11522,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test420() throws Throwable {
+    public void test429() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test420");
+            System.out.format("%n%s%n", "RegressionTest0.test429");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
@@ -11372,9 +11549,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test421() throws Throwable {
+    public void test430() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test421");
+            System.out.format("%n%s%n", "RegressionTest0.test430");
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner23 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object[] objArray24 = new java.lang.Object[] { (short) 10, (byte) 100, 1.0d, 1, (-1.0f), 10.0f, (byte) 1, 1, 10.0f, (-1.0d), (short) -1, "hi!", 1.0d, (byte) 1, 1.0f, (short) -1, 10, 10L, false, (byte) -1, (-1L), false, (-1), cleaner23 };
         java.util.LinkedHashSet<java.lang.Object> objSet25 = new java.util.LinkedHashSet<java.lang.Object>();
@@ -11417,9 +11594,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test422() throws Throwable {
+    public void test431() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test422");
+            System.out.format("%n%s%n", "RegressionTest0.test431");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
@@ -11435,9 +11612,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test423() throws Throwable {
+    public void test432() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test423");
+            System.out.format("%n%s%n", "RegressionTest0.test432");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         strWeakConcurrentSet1.expungeStaleEntries();
@@ -11449,9 +11626,25 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test424() throws Throwable {
+    public void test433() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test424");
+            System.out.format("%n%s%n", "RegressionTest0.test433");
+        org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
+        org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray1 = new org.mockito.internal.util.reflection.InstanceField[] {};
+        java.util.ArrayList<org.mockito.internal.util.reflection.InstanceField> instanceFieldList2 = new java.util.ArrayList<org.mockito.internal.util.reflection.InstanceField>();
+        boolean boolean3 = java.util.Collections.addAll((java.util.Collection<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList2, instanceFieldArray1);
+        boolean boolean4 = instanceFieldListWithInlinedExpunction0.containsKey((java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList2);
+        java.util.Iterator<java.util.Map.Entry<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>> instanceFieldListEntryItor5 = instanceFieldListWithInlinedExpunction0.iterator();
+        org.junit.Assert.assertNotNull(instanceFieldArray1);
+        org.junit.Assert.assertTrue("'" + boolean3 + "' != '" + false + "'", boolean3 == false);
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
+        org.junit.Assert.assertNotNull(instanceFieldListEntryItor5);
+    }
+
+    @Test
+    public void test434() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test434");
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         boolean boolean3 = weakConcurrentMap0.add((java.lang.Object) cleanerEnumWeakConcurrentMap2);
@@ -11463,9 +11656,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test425() throws Throwable {
+    public void test435() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test425");
+            System.out.format("%n%s%n", "RegressionTest0.test435");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -11530,9 +11723,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test426() throws Throwable {
+    public void test436() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test426");
+            System.out.format("%n%s%n", "RegressionTest0.test436");
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner23 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object[] objArray24 = new java.lang.Object[] { (short) 10, (byte) 100, 1.0d, 1, (-1.0f), 10.0f, (byte) 1, 1, 10.0f, (-1.0d), (short) -1, "hi!", 1.0d, (byte) 1, 1.0f, (short) -1, 10, 10L, false, (byte) -1, (-1L), false, (-1), cleaner23 };
         java.util.LinkedHashSet<java.lang.Object> objSet25 = new java.util.LinkedHashSet<java.lang.Object>();
@@ -11555,9 +11748,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test427() throws Throwable {
+    public void test437() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test427");
+            System.out.format("%n%s%n", "RegressionTest0.test437");
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner1 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet2 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner1);
@@ -11663,17 +11856,17 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test428() throws Throwable {
+    public void test438() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test428");
-        java.lang.String str1 = org.mockito.internal.util.StringUtil.decamelizeMatcher("[]10.0\n1.0\n1\n100\n10\nINLINE\n-1\n10\n1.0\n-1.0\nfalse\nhi!\n-1\n-1.0\n-1\n10\n1\n-1");
-        org.junit.Assert.assertTrue("'" + str1 + "' != '" + "<1 0. 0\n 1. 0\n 1\n 1 0 0\n 1 0\n i n l i n e\n- 1\n 1 0\n 1. 0\n- 1. 0\nfalse\nhi!\n- 1\n- 1. 0\n- 1\n 1 0\n 1\n- 1>" + "'", str1.equals("<1 0. 0\n 1. 0\n 1\n 1 0 0\n 1 0\n i n l i n e\n- 1\n 1 0\n 1. 0\n- 1. 0\nfalse\nhi!\n- 1\n- 1. 0\n- 1\n 1 0\n 1\n- 1>"));
+            System.out.format("%n%s%n", "RegressionTest0.test438");
+        java.lang.String str1 = org.mockito.internal.util.StringUtil.decamelizeMatcher("[]10\n1\n1\n1.0\nfalse\n-1\n10\n100\nINLINE\nhi!\n-1\n10\n-1\n1.0\n-1.0\n10.0\n-1.0\n-1");
+        org.junit.Assert.assertTrue("'" + str1 + "' != '" + "<1 0\n 1\n 1\n 1. 0\nfalse\n- 1\n 1 0\n 1 0 0\n i n l i n e\nhi!\n- 1\n 1 0\n- 1\n 1. 0\n- 1. 0\n 1 0. 0\n- 1. 0\n- 1>" + "'", str1.equals("<1 0\n 1\n 1\n 1. 0\nfalse\n- 1\n 1 0\n 1 0 0\n i n l i n e\nhi!\n- 1\n 1 0\n- 1\n 1. 0\n- 1. 0\n 1 0. 0\n- 1. 0\n- 1>"));
     }
 
     @Test
-    public void test429() throws Throwable {
+    public void test439() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test429");
+            System.out.format("%n%s%n", "RegressionTest0.test439");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -11714,9 +11907,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test430() throws Throwable {
+    public void test440() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test430");
+            System.out.format("%n%s%n", "RegressionTest0.test440");
         org.mockito.internal.util.reflection.FieldCopier fieldCopier0 = new org.mockito.internal.util.reflection.FieldCopier();
         try {
             org.mockito.internal.util.MockUtil.resetMock(fieldCopier0);
@@ -11726,9 +11919,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test431() throws Throwable {
+    public void test441() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test431");
+            System.out.format("%n%s%n", "RegressionTest0.test441");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) ' ');
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails4 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails1, "", "hi!");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails6 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails4, "hi!");
@@ -11742,9 +11935,54 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test432() throws Throwable {
+    public void test442() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test432");
+            System.out.format("%n%s%n", "RegressionTest0.test442");
+        org.mockito.internal.util.collections.IdentitySet identitySet0 = new org.mockito.internal.util.collections.IdentitySet();
+        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
+        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
+        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner5 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
+        java.lang.Object obj6 = cleanerEnumWeakConcurrentMap4.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner5);
+        java.lang.Object obj7 = cleanerEnumWeakConcurrentMap2.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner5);
+        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner8 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD;
+        java.lang.Object obj9 = cleanerEnumWeakConcurrentMap2.remove((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner8);
+        org.mockito.internal.util.concurrent.DetachedThreadLocal<org.mockito.mock.MockName> mockNameDetachedThreadLocal10 = new org.mockito.internal.util.concurrent.DetachedThreadLocal<org.mockito.mock.MockName>(cleaner8);
+        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap12 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
+        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap14 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
+        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner15 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
+        java.lang.Object obj16 = cleanerEnumWeakConcurrentMap14.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner15);
+        java.lang.Object obj17 = cleanerEnumWeakConcurrentMap12.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner15);
+        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner18 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD;
+        java.lang.Object obj19 = cleanerEnumWeakConcurrentMap12.remove((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner18);
+        org.mockito.internal.util.concurrent.DetachedThreadLocal<org.mockito.mock.MockName> mockNameDetachedThreadLocal20 = new org.mockito.internal.util.concurrent.DetachedThreadLocal<org.mockito.mock.MockName>(cleaner18);
+        org.mockito.internal.util.MockNameImpl mockNameImpl22 = new org.mockito.internal.util.MockNameImpl("");
+        mockNameDetachedThreadLocal20.set((org.mockito.mock.MockName) mockNameImpl22);
+        mockNameDetachedThreadLocal10.set((org.mockito.mock.MockName) mockNameImpl22);
+        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Thread, org.mockito.mock.MockName> threadWeakConcurrentMap25 = mockNameDetachedThreadLocal10.getBackingMap();
+        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Thread, org.mockito.mock.MockName> threadWeakConcurrentMap26 = mockNameDetachedThreadLocal10.getBackingMap();
+        boolean boolean27 = identitySet0.contains((java.lang.Object) mockNameDetachedThreadLocal10);
+        mockNameDetachedThreadLocal10.clearAll();
+        org.mockito.mock.MockName mockName29 = mockNameDetachedThreadLocal10.get();
+        org.junit.Assert.assertTrue("'" + cleaner5 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE + "'", cleaner5.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE));
+        org.junit.Assert.assertNull(obj6);
+        org.junit.Assert.assertNull(obj7);
+        org.junit.Assert.assertTrue("'" + cleaner8 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD + "'", cleaner8.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD));
+        org.junit.Assert.assertNull(obj9);
+        org.junit.Assert.assertTrue("'" + cleaner15 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE + "'", cleaner15.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE));
+        org.junit.Assert.assertNull(obj16);
+        org.junit.Assert.assertNull(obj17);
+        org.junit.Assert.assertTrue("'" + cleaner18 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD + "'", cleaner18.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD));
+        org.junit.Assert.assertNull(obj19);
+        org.junit.Assert.assertNotNull(threadWeakConcurrentMap25);
+        org.junit.Assert.assertNotNull(threadWeakConcurrentMap26);
+        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
+        org.junit.Assert.assertNull(mockName29);
+    }
+
+    @Test
+    public void test443() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test443");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         org.mockito.internal.util.concurrent.WeakConcurrentMap weakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap();
         java.lang.Iterable<java.lang.Object> objIterable3 = org.mockito.internal.util.Checks.checkItemsNotNull((java.lang.Iterable<java.lang.Object>) weakConcurrentMap1, "");
@@ -11848,9 +12086,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test433() throws Throwable {
+    public void test444() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test433");
+            System.out.format("%n%s%n", "RegressionTest0.test444");
         java.lang.reflect.WildcardType wildcardType0 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
         java.lang.reflect.WildcardType wildcardType2 = wildCardBoundedType1.wildCard();
@@ -11886,9 +12124,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test434() throws Throwable {
+    public void test445() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test434");
+            System.out.format("%n%s%n", "RegressionTest0.test445");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray2 = new org.mockito.internal.util.reflection.InstanceField[] {};
@@ -11917,9 +12155,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test435() throws Throwable {
+    public void test446() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test435");
+            System.out.format("%n%s%n", "RegressionTest0.test446");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -11953,9 +12191,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test436() throws Throwable {
+    public void test447() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test436");
+            System.out.format("%n%s%n", "RegressionTest0.test447");
         java.lang.reflect.WildcardType wildcardType0 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
         java.lang.reflect.WildcardType wildcardType2 = wildCardBoundedType1.wildCard();
@@ -11980,9 +12218,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test437() throws Throwable {
+    public void test448() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test437");
+            System.out.format("%n%s%n", "RegressionTest0.test448");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray2 = new org.mockito.internal.util.reflection.InstanceField[] {};
@@ -12006,9 +12244,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test438() throws Throwable {
+    public void test449() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test438");
+            System.out.format("%n%s%n", "RegressionTest0.test449");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) ' ');
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails4 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails1, "", "hi!");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails6 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails4, "hi!");
@@ -12020,9 +12258,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test439() throws Throwable {
+    public void test450() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test439");
+            System.out.format("%n%s%n", "RegressionTest0.test450");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -12049,9 +12287,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test440() throws Throwable {
+    public void test451() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test440");
+            System.out.format("%n%s%n", "RegressionTest0.test451");
         org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner1 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet2 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner1);
@@ -12070,18 +12308,18 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test441() throws Throwable {
+    public void test452() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test441");
+            System.out.format("%n%s%n", "RegressionTest0.test452");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.THREAD;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.THREAD + "'", cleaner0.equals(org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.THREAD));
     }
 
     @Test
-    public void test442() throws Throwable {
+    public void test453() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test442");
+            System.out.format("%n%s%n", "RegressionTest0.test453");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
@@ -12118,9 +12356,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test443() throws Throwable {
+    public void test454() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test443");
+            System.out.format("%n%s%n", "RegressionTest0.test454");
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) 100L);
         try {
             boolean boolean2 = defaultMockingDetails1.isSpy();
@@ -12130,9 +12368,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test444() throws Throwable {
+    public void test455() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test444");
+            System.out.format("%n%s%n", "RegressionTest0.test455");
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
@@ -12151,9 +12389,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test445() throws Throwable {
+    public void test456() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test445");
+            System.out.format("%n%s%n", "RegressionTest0.test456");
         org.mockito.internal.util.reflection.AccessibilityChanger accessibilityChanger0 = new org.mockito.internal.util.reflection.AccessibilityChanger();
         java.lang.reflect.AccessibleObject accessibleObject1 = null;
         accessibilityChanger0.safelyDisableAccess(accessibleObject1);
@@ -12168,9 +12406,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test446() throws Throwable {
+    public void test457() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test446");
+            System.out.format("%n%s%n", "RegressionTest0.test457");
         org.mockito.internal.util.reflection.LenientCopyTool lenientCopyTool0 = new org.mockito.internal.util.reflection.LenientCopyTool();
         java.lang.reflect.WildcardType wildcardType1 = null;
         org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType2 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType1);
@@ -12202,9 +12440,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test447() throws Throwable {
+    public void test458() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test447");
+            System.out.format("%n%s%n", "RegressionTest0.test458");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -12227,9 +12465,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test448() throws Throwable {
+    public void test459() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test448");
+            System.out.format("%n%s%n", "RegressionTest0.test459");
         org.mockito.internal.util.reflection.AccessibilityChanger accessibilityChanger0 = new org.mockito.internal.util.reflection.AccessibilityChanger();
         java.lang.reflect.AccessibleObject accessibleObject1 = null;
         accessibilityChanger0.safelyDisableAccess(accessibleObject1);
@@ -12240,9 +12478,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test449() throws Throwable {
+    public void test460() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test449");
+            System.out.format("%n%s%n", "RegressionTest0.test460");
         org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
         org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
         java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
@@ -12258,9 +12496,27 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test450() throws Throwable {
+    public void test461() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test450");
+            System.out.format("%n%s%n", "RegressionTest0.test461");
+        org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
+        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
+        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
+        boolean boolean5 = strWeakConcurrentSet1.contains("hi!");
+        strWeakConcurrentSet1.clear();
+        strWeakConcurrentSet1.expungeStaleEntries();
+        strWeakConcurrentSet1.clear();
+        boolean boolean10 = strWeakConcurrentSet1.add("[]");
+        org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE + "'", cleaner0.equals(org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE));
+        org.junit.Assert.assertNotNull(strWeakConcurrentSet3);
+        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
+        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
+    }
+
+    @Test
+    public void test462() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test462");
         java.io.File file1 = null;
         try {
             org.mockito.internal.util.io.IOUtil.writeText("[]", file1);
@@ -12270,9 +12526,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test451() throws Throwable {
+    public void test463() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test451");
+            System.out.format("%n%s%n", "RegressionTest0.test463");
         java.lang.Object obj0 = null;
         org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails(obj0);
         try {
@@ -12280,467 +12536,6 @@ public class RegressionTest0 {
             org.junit.Assert.fail("Expected exception of type org.mockito.exceptions.misusing.NotAMockException; message: Argument passed to Mockito.mockingDetails() should be a mock, but is null!");
         } catch (org.mockito.exceptions.misusing.NotAMockException e) {
         }
-    }
-
-    @Test
-    public void test452() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test452");
-        org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
-        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
-        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
-        java.lang.Thread thread4 = strWeakConcurrentSet1.getCleanerThread();
-        boolean boolean6 = strWeakConcurrentSet1.add("");
-        boolean boolean8 = strWeakConcurrentSet1.contains("class org.mockito.internal.util.concurrent.WeakConcurrentMap");
-        boolean boolean10 = strWeakConcurrentSet1.remove("");
-        strWeakConcurrentSet1.expungeStaleEntries();
-        java.util.Iterator<java.lang.String> strItor12 = strWeakConcurrentSet1.iterator();
-        java.util.Iterator<java.lang.String> strItor13 = strWeakConcurrentSet1.iterator();
-        boolean boolean15 = strWeakConcurrentSet1.add("hi!");
-        try {
-            org.mockito.mock.MockName mockName16 = org.mockito.internal.util.MockUtil.getMockName((java.lang.Object) "hi!");
-            org.junit.Assert.fail("Expected exception of type java.lang.IllegalStateException; message: Could not initialize plugin: interface org.mockito.plugins.MockMaker (alternate: null)");
-        } catch (java.lang.IllegalStateException e) {
-        }
-        org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE + "'", cleaner0.equals(org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE));
-        org.junit.Assert.assertNotNull(strWeakConcurrentSet3);
-        org.junit.Assert.assertNull(thread4);
-        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + true + "'", boolean6 == true);
-        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
-        org.junit.Assert.assertNotNull(strItor12);
-        org.junit.Assert.assertNotNull(strItor13);
-        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + true + "'", boolean15 == true);
-    }
-
-    @Test
-    public void test453() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test453");
-        org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
-        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
-        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
-        java.lang.Thread thread4 = strWeakConcurrentSet1.getCleanerThread();
-        boolean boolean6 = strWeakConcurrentSet1.add("");
-        boolean boolean8 = strWeakConcurrentSet1.contains("class org.mockito.internal.util.concurrent.WeakConcurrentMap");
-        boolean boolean10 = strWeakConcurrentSet1.remove("");
-        strWeakConcurrentSet1.expungeStaleEntries();
-        java.lang.Thread thread12 = strWeakConcurrentSet1.getCleanerThread();
-        strWeakConcurrentSet1.clear();
-        org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE + "'", cleaner0.equals(org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE));
-        org.junit.Assert.assertNotNull(strWeakConcurrentSet3);
-        org.junit.Assert.assertNull(thread4);
-        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + true + "'", boolean6 == true);
-        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
-        org.junit.Assert.assertNull(thread12);
-    }
-
-    @Test
-    public void test454() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test454");
-        org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
-        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
-        org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails2 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) strWeakConcurrentSet1);
-        org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE + "'", cleaner0.equals(org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE));
-    }
-
-    @Test
-    public void test455() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test455");
-        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
-        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner2 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
-        java.lang.Object obj3 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner2);
-        java.util.Iterator<java.util.Map.Entry<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>> cleanerEnumEntryItor4 = cleanerEnumWeakConcurrentMap1.iterator();
-        try {
-            org.mockito.mock.MockName mockName5 = org.mockito.internal.util.MockUtil.getMockName((java.lang.Object) cleanerEnumEntryItor4);
-            org.junit.Assert.fail("Expected exception of type java.lang.IllegalStateException; message: Could not initialize plugin: interface org.mockito.plugins.MockMaker (alternate: null)");
-        } catch (java.lang.IllegalStateException e) {
-        }
-        org.junit.Assert.assertTrue("'" + cleaner2 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE + "'", cleaner2.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE));
-        org.junit.Assert.assertNull(obj3);
-        org.junit.Assert.assertNotNull(cleanerEnumEntryItor4);
-    }
-
-    @Test
-    public void test456() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test456");
-        org.mockito.internal.util.collections.IdentitySet identitySet0 = new org.mockito.internal.util.collections.IdentitySet();
-        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap2 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
-        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap4 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
-        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner5 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
-        java.lang.Object obj6 = cleanerEnumWeakConcurrentMap4.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner5);
-        java.lang.Object obj7 = cleanerEnumWeakConcurrentMap2.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner5);
-        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner8 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD;
-        java.lang.Object obj9 = cleanerEnumWeakConcurrentMap2.remove((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner8);
-        org.mockito.internal.util.concurrent.DetachedThreadLocal<org.mockito.mock.MockName> mockNameDetachedThreadLocal10 = new org.mockito.internal.util.concurrent.DetachedThreadLocal<org.mockito.mock.MockName>(cleaner8);
-        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap12 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
-        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap14 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
-        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner15 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
-        java.lang.Object obj16 = cleanerEnumWeakConcurrentMap14.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner15);
-        java.lang.Object obj17 = cleanerEnumWeakConcurrentMap12.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner15);
-        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner18 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD;
-        java.lang.Object obj19 = cleanerEnumWeakConcurrentMap12.remove((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner18);
-        org.mockito.internal.util.concurrent.DetachedThreadLocal<org.mockito.mock.MockName> mockNameDetachedThreadLocal20 = new org.mockito.internal.util.concurrent.DetachedThreadLocal<org.mockito.mock.MockName>(cleaner18);
-        org.mockito.internal.util.MockNameImpl mockNameImpl22 = new org.mockito.internal.util.MockNameImpl("");
-        mockNameDetachedThreadLocal20.set((org.mockito.mock.MockName) mockNameImpl22);
-        mockNameDetachedThreadLocal10.set((org.mockito.mock.MockName) mockNameImpl22);
-        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Thread, org.mockito.mock.MockName> threadWeakConcurrentMap25 = mockNameDetachedThreadLocal10.getBackingMap();
-        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Thread, org.mockito.mock.MockName> threadWeakConcurrentMap26 = mockNameDetachedThreadLocal10.getBackingMap();
-        boolean boolean27 = identitySet0.contains((java.lang.Object) mockNameDetachedThreadLocal10);
-        mockNameDetachedThreadLocal10.clearAll();
-        org.mockito.mock.MockName mockName29 = mockNameDetachedThreadLocal10.get();
-        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap31 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(true);
-        java.lang.Thread thread32 = cleanerEnumWeakConcurrentMap31.getCleanerThread();
-        org.mockito.mock.MockName mockName33 = mockNameDetachedThreadLocal10.get(thread32);
-        org.junit.Assert.assertTrue("'" + cleaner5 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE + "'", cleaner5.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE));
-        org.junit.Assert.assertNull(obj6);
-        org.junit.Assert.assertNull(obj7);
-        org.junit.Assert.assertTrue("'" + cleaner8 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD + "'", cleaner8.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD));
-        org.junit.Assert.assertNull(obj9);
-        org.junit.Assert.assertTrue("'" + cleaner15 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE + "'", cleaner15.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE));
-        org.junit.Assert.assertNull(obj16);
-        org.junit.Assert.assertNull(obj17);
-        org.junit.Assert.assertTrue("'" + cleaner18 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD + "'", cleaner18.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD));
-        org.junit.Assert.assertNull(obj19);
-        org.junit.Assert.assertNotNull(threadWeakConcurrentMap25);
-        org.junit.Assert.assertNotNull(threadWeakConcurrentMap26);
-        org.junit.Assert.assertTrue("'" + boolean27 + "' != '" + false + "'", boolean27 == false);
-        org.junit.Assert.assertNull(mockName29);
-        org.junit.Assert.assertNotNull(thread32);
-        org.junit.Assert.assertNull(mockName33);
-    }
-
-    @Test
-    public void test457() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test457");
-        org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails1 = new org.mockito.internal.util.DefaultMockingDetails((java.lang.Object) ' ');
-        org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails4 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails1, "", "hi!");
-        org.mockito.internal.util.DefaultMockingDetails defaultMockingDetails6 = org.mockito.internal.util.Checks.checkNotNull(defaultMockingDetails4, "hi!");
-        org.mockito.internal.util.collections.HashCodeAndEqualsMockWrapper hashCodeAndEqualsMockWrapper7 = new org.mockito.internal.util.collections.HashCodeAndEqualsMockWrapper((java.lang.Object) defaultMockingDetails6);
-        java.lang.Object obj8 = null;
-        boolean boolean9 = hashCodeAndEqualsMockWrapper7.equals(obj8);
-        java.lang.Object obj10 = hashCodeAndEqualsMockWrapper7.get();
-        org.junit.Assert.assertNotNull(defaultMockingDetails4);
-        org.junit.Assert.assertNotNull(defaultMockingDetails6);
-        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
-        org.junit.Assert.assertNotNull(obj10);
-    }
-
-    @Test
-    public void test458() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test458");
-        org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
-        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
-        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
-        java.lang.Thread thread4 = strWeakConcurrentSet1.getCleanerThread();
-        boolean boolean6 = strWeakConcurrentSet1.add("");
-        java.util.Iterator<java.lang.String> strItor7 = strWeakConcurrentSet1.iterator();
-        int int8 = strWeakConcurrentSet1.approximateSize();
-        org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE + "'", cleaner0.equals(org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE));
-        org.junit.Assert.assertNotNull(strWeakConcurrentSet3);
-        org.junit.Assert.assertNull(thread4);
-        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + true + "'", boolean6 == true);
-        org.junit.Assert.assertNotNull(strItor7);
-        org.junit.Assert.assertTrue("'" + int8 + "' != '" + 1 + "'", int8 == 1);
-    }
-
-    @Test
-    public void test459() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test459");
-        org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
-        org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray1 = new org.mockito.internal.util.reflection.InstanceField[] {};
-        java.util.ArrayList<org.mockito.internal.util.reflection.InstanceField> instanceFieldList2 = new java.util.ArrayList<org.mockito.internal.util.reflection.InstanceField>();
-        boolean boolean3 = java.util.Collections.addAll((java.util.Collection<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList2, instanceFieldArray1);
-        boolean boolean4 = instanceFieldListWithInlinedExpunction0.containsKey((java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList2);
-        java.util.Iterator<java.util.Map.Entry<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>> instanceFieldListEntryItor5 = instanceFieldListWithInlinedExpunction0.iterator();
-        java.util.Iterator<java.util.Map.Entry<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>> instanceFieldListEntryItor6 = instanceFieldListWithInlinedExpunction0.iterator();
-        org.junit.Assert.assertNotNull(instanceFieldArray1);
-        org.junit.Assert.assertTrue("'" + boolean3 + "' != '" + false + "'", boolean3 == false);
-        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
-        org.junit.Assert.assertNotNull(instanceFieldListEntryItor5);
-        org.junit.Assert.assertNotNull(instanceFieldListEntryItor6);
-    }
-
-    @Test
-    public void test460() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test460");
-        java.lang.reflect.WildcardType wildcardType0 = null;
-        org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
-        java.lang.reflect.WildcardType wildcardType2 = wildCardBoundedType1.wildCard();
-        java.lang.reflect.WildcardType wildcardType3 = wildCardBoundedType1.wildCard();
-        boolean boolean5 = wildCardBoundedType1.equals((java.lang.Object) true);
-        try {
-            java.lang.reflect.Type type6 = wildCardBoundedType1.firstBound();
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertNull(wildcardType2);
-        org.junit.Assert.assertNull(wildcardType3);
-        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
-    }
-
-    @Test
-    public void test461() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test461");
-        java.lang.reflect.WildcardType wildcardType0 = null;
-        org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType wildCardBoundedType1 = new org.mockito.internal.util.reflection.GenericMetadataSupport.WildCardBoundedType(wildcardType0);
-        org.mockito.internal.util.Checks checks2 = new org.mockito.internal.util.Checks();
-        boolean boolean3 = wildCardBoundedType1.equals((java.lang.Object) checks2);
-        boolean boolean5 = wildCardBoundedType1.equals((java.lang.Object) "");
-        java.lang.reflect.WildcardType wildcardType6 = wildCardBoundedType1.wildCard();
-        java.lang.reflect.WildcardType wildcardType7 = wildCardBoundedType1.wildCard();
-        org.junit.Assert.assertTrue("'" + boolean3 + "' != '" + false + "'", boolean3 == false);
-        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
-        org.junit.Assert.assertNull(wildcardType6);
-        org.junit.Assert.assertNull(wildcardType7);
-    }
-
-    @Test
-    public void test462() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test462");
-        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
-        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
-        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
-        java.lang.Object obj5 = cleanerEnumWeakConcurrentMap3.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner4);
-        java.lang.Object obj6 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner4);
-        org.mockito.internal.util.concurrent.DetachedThreadLocal<org.mockito.mock.MockName> mockNameDetachedThreadLocal7 = new org.mockito.internal.util.concurrent.DetachedThreadLocal<org.mockito.mock.MockName>(cleaner4);
-        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Thread, org.mockito.mock.MockName> threadWeakConcurrentMap8 = mockNameDetachedThreadLocal7.getBackingMap();
-        java.lang.Thread thread9 = null;
-        try {
-            org.mockito.mock.MockName mockName10 = mockNameDetachedThreadLocal7.fetchFrom(thread9);
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertTrue("'" + cleaner4 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE + "'", cleaner4.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE));
-        org.junit.Assert.assertNull(obj5);
-        org.junit.Assert.assertNull(obj6);
-        org.junit.Assert.assertNotNull(threadWeakConcurrentMap8);
-    }
-
-    @Test
-    public void test463() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test463");
-        org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
-        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
-        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
-        boolean boolean5 = strWeakConcurrentSet1.contains("hi!");
-        strWeakConcurrentSet1.clear();
-        strWeakConcurrentSet1.expungeStaleEntries();
-        strWeakConcurrentSet1.clear();
-        boolean boolean10 = strWeakConcurrentSet1.add("[]");
-        int int11 = strWeakConcurrentSet1.approximateSize();
-        org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE + "'", cleaner0.equals(org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE));
-        org.junit.Assert.assertNotNull(strWeakConcurrentSet3);
-        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
-        org.junit.Assert.assertTrue("'" + boolean10 + "' != '" + true + "'", boolean10 == true);
-        org.junit.Assert.assertTrue("'" + int11 + "' != '" + 1 + "'", int11 == 1);
-    }
-
-    @Test
-    public void test464() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test464");
-        org.mockito.internal.util.Primitives primitives0 = new org.mockito.internal.util.Primitives();
-        org.mockito.internal.util.reflection.FieldInitializationReport fieldInitializationReport3 = new org.mockito.internal.util.reflection.FieldInitializationReport((java.lang.Object) primitives0, false, false);
-        boolean boolean4 = fieldInitializationReport3.fieldWasInitialized();
-        boolean boolean5 = fieldInitializationReport3.fieldWasInitialized();
-        boolean boolean6 = fieldInitializationReport3.fieldWasInitialized();
-        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
-        org.junit.Assert.assertTrue("'" + boolean5 + "' != '" + false + "'", boolean5 == false);
-        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + false + "'", boolean6 == false);
-    }
-
-    @Test
-    public void test465() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test465");
-        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap1 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
-        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap3 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
-        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner4 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
-        java.lang.Object obj5 = cleanerEnumWeakConcurrentMap3.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner4);
-        java.lang.Object obj6 = cleanerEnumWeakConcurrentMap1.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner4);
-        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner7 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD;
-        java.lang.Object obj8 = cleanerEnumWeakConcurrentMap1.remove((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner7);
-        int int9 = cleanerEnumWeakConcurrentMap1.approximateSize();
-        java.lang.Thread thread10 = cleanerEnumWeakConcurrentMap1.getCleanerThread();
-        org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object> cleanerEnumWeakConcurrentMap12 = new org.mockito.internal.util.concurrent.WeakConcurrentMap<java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>, java.lang.Object>(false);
-        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner13 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
-        java.lang.Object obj14 = cleanerEnumWeakConcurrentMap12.get((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner13);
-        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner15 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE;
-        java.lang.Object obj16 = cleanerEnumWeakConcurrentMap12.remove((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner15);
-        boolean boolean17 = cleanerEnumWeakConcurrentMap1.containsKey((java.lang.Enum<org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner>) cleaner15);
-        org.mockito.internal.util.collections.HashCodeAndEqualsMockWrapper hashCodeAndEqualsMockWrapper18 = org.mockito.internal.util.collections.HashCodeAndEqualsMockWrapper.of((java.lang.Object) boolean17);
-        java.lang.Object obj19 = hashCodeAndEqualsMockWrapper18.get();
-        try {
-            java.lang.String str20 = hashCodeAndEqualsMockWrapper18.toString();
-            org.junit.Assert.fail("Expected exception of type java.lang.IllegalStateException; message: Could not initialize plugin: interface org.mockito.plugins.MockMaker (alternate: null)");
-        } catch (java.lang.IllegalStateException e) {
-        }
-        org.junit.Assert.assertTrue("'" + cleaner4 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE + "'", cleaner4.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE));
-        org.junit.Assert.assertNull(obj5);
-        org.junit.Assert.assertNull(obj6);
-        org.junit.Assert.assertTrue("'" + cleaner7 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD + "'", cleaner7.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.THREAD));
-        org.junit.Assert.assertNull(obj8);
-        org.junit.Assert.assertTrue("'" + int9 + "' != '" + 0 + "'", int9 == 0);
-        org.junit.Assert.assertNull(thread10);
-        org.junit.Assert.assertTrue("'" + cleaner13 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE + "'", cleaner13.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE));
-        org.junit.Assert.assertNull(obj14);
-        org.junit.Assert.assertTrue("'" + cleaner15 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE + "'", cleaner15.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.INLINE));
-        org.junit.Assert.assertNull(obj16);
-        org.junit.Assert.assertTrue("'" + boolean17 + "' != '" + false + "'", boolean17 == false);
-        org.junit.Assert.assertNotNull(hashCodeAndEqualsMockWrapper18);
-        org.junit.Assert.assertTrue("'" + obj19 + "' != '" + false + "'", obj19.equals(false));
-    }
-
-    @Test
-    public void test466() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test466");
-        org.mockito.internal.util.MockNameImpl mockNameImpl1 = new org.mockito.internal.util.MockNameImpl("<[]>10\n100\n1.0\n1\n-1.0\n10.0\n1\n-1.0\n-1\nhi!\n1.0\n10\n10\nfalse\n-1\n-1\n-1\nINLINE");
-    }
-
-    @Test
-    public void test467() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test467");
-        java.lang.String str1 = org.mockito.internal.util.StringUtil.removeFirstLine("class org.mockito.internal.util.concurrent.WeakConcurrentMap");
-        org.junit.Assert.assertTrue("'" + str1 + "' != '" + "class org.mockito.internal.util.concurrent.WeakConcurrentMap" + "'", str1.equals("class org.mockito.internal.util.concurrent.WeakConcurrentMap"));
-    }
-
-    @Test
-    public void test468() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test468");
-        org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
-        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
-        org.mockito.internal.util.concurrent.WeakConcurrentSet<org.mockito.internal.util.concurrent.WeakConcurrentMap> weakConcurrentMapWeakConcurrentSet2 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<org.mockito.internal.util.concurrent.WeakConcurrentMap>(cleaner0);
-        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
-        strWeakConcurrentSet3.clear();
-        org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE + "'", cleaner0.equals(org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE));
-    }
-
-    @Test
-    public void test469() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test469");
-        org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner cleaner0 = org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.MANUAL;
-        org.mockito.internal.util.concurrent.DetachedThreadLocal<org.mockito.mock.MockName> mockNameDetachedThreadLocal1 = new org.mockito.internal.util.concurrent.DetachedThreadLocal<org.mockito.mock.MockName>(cleaner0);
-        org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.MANUAL + "'", cleaner0.equals(org.mockito.internal.util.concurrent.DetachedThreadLocal.Cleaner.MANUAL));
-    }
-
-    @Test
-    public void test470() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test470");
-        org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>> instanceFieldListWithInlinedExpunction0 = new org.mockito.internal.util.concurrent.WeakConcurrentMap.WithInlinedExpunction<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>();
-        org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray1 = new org.mockito.internal.util.reflection.InstanceField[] {};
-        java.util.ArrayList<org.mockito.internal.util.reflection.InstanceField> instanceFieldList2 = new java.util.ArrayList<org.mockito.internal.util.reflection.InstanceField>();
-        boolean boolean3 = java.util.Collections.addAll((java.util.Collection<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList2, instanceFieldArray1);
-        boolean boolean4 = instanceFieldListWithInlinedExpunction0.containsKey((java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList2);
-        org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray5 = new org.mockito.internal.util.reflection.InstanceField[] {};
-        java.util.ArrayList<org.mockito.internal.util.reflection.InstanceField> instanceFieldList6 = new java.util.ArrayList<org.mockito.internal.util.reflection.InstanceField>();
-        boolean boolean7 = java.util.Collections.addAll((java.util.Collection<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList6, instanceFieldArray5);
-        java.util.AbstractSequentialList<java.lang.Object> objList8 = instanceFieldListWithInlinedExpunction0.get((java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList6);
-        java.util.Iterator<java.util.Map.Entry<java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>, java.util.AbstractSequentialList<java.lang.Object>>> instanceFieldListEntryItor9 = instanceFieldListWithInlinedExpunction0.iterator();
-        org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray10 = new org.mockito.internal.util.reflection.InstanceField[] {};
-        java.util.ArrayList<org.mockito.internal.util.reflection.InstanceField> instanceFieldList11 = new java.util.ArrayList<org.mockito.internal.util.reflection.InstanceField>();
-        boolean boolean12 = java.util.Collections.addAll((java.util.Collection<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList11, instanceFieldArray10);
-        java.util.List<org.mockito.internal.util.reflection.InstanceField> instanceFieldList14 = org.mockito.internal.util.Checks.checkItemsNotNull((java.util.List<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList11, "class org.mockito.internal.util.concurrent.WeakConcurrentMap");
-        boolean boolean15 = instanceFieldListWithInlinedExpunction0.containsKey((java.util.AbstractList<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList11);
-        org.junit.Assert.assertNotNull(instanceFieldArray1);
-        org.junit.Assert.assertTrue("'" + boolean3 + "' != '" + false + "'", boolean3 == false);
-        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
-        org.junit.Assert.assertNotNull(instanceFieldArray5);
-        org.junit.Assert.assertTrue("'" + boolean7 + "' != '" + false + "'", boolean7 == false);
-        org.junit.Assert.assertNull(objList8);
-        org.junit.Assert.assertNotNull(instanceFieldListEntryItor9);
-        org.junit.Assert.assertNotNull(instanceFieldArray10);
-        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
-        org.junit.Assert.assertNotNull(instanceFieldList14);
-        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
-    }
-
-    @Test
-    public void test471() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test471");
-        org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
-        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
-        org.mockito.internal.util.reflection.InstanceField[] instanceFieldArray2 = new org.mockito.internal.util.reflection.InstanceField[] {};
-        java.util.ArrayList<org.mockito.internal.util.reflection.InstanceField> instanceFieldList3 = new java.util.ArrayList<org.mockito.internal.util.reflection.InstanceField>();
-        boolean boolean4 = java.util.Collections.addAll((java.util.Collection<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList3, instanceFieldArray2);
-        org.mockito.internal.util.reflection.Fields.InstanceFields instanceFields5 = new org.mockito.internal.util.reflection.Fields.InstanceFields((java.lang.Object) strWeakConcurrentSet1, (java.util.List<org.mockito.internal.util.reflection.InstanceField>) instanceFieldList3);
-        org.mockito.internal.util.reflection.Fields.InstanceFields instanceFields6 = instanceFields5.notNull();
-        java.util.List<java.lang.String> strList7 = instanceFields5.names();
-        java.util.List<java.lang.String> strList8 = instanceFields5.names();
-        java.lang.reflect.Field field9 = null;
-        try {
-            org.mockito.internal.util.reflection.FieldInitializer fieldInitializer10 = new org.mockito.internal.util.reflection.FieldInitializer((java.lang.Object) strList8, field9);
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE + "'", cleaner0.equals(org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE));
-        org.junit.Assert.assertNotNull(instanceFieldArray2);
-        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
-        org.junit.Assert.assertNotNull(instanceFields6);
-        org.junit.Assert.assertNotNull(strList7);
-        org.junit.Assert.assertNotNull(strList8);
-    }
-
-    @Test
-    public void test472() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test472");
-        org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
-        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
-        strWeakConcurrentSet1.expungeStaleEntries();
-        boolean boolean4 = strWeakConcurrentSet1.add("\nclass org.mockito.internal.util.concurrent.WeakConcurrentMap\nclass org.mockito.internal.util.concurrent.WeakConcurrentMap\nclass org.mockito.internal.util.concurrent.WeakConcurrentMap");
-        org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE + "'", cleaner0.equals(org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE));
-        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + true + "'", boolean4 == true);
-    }
-
-    @Test
-    public void test473() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test473");
-        try {
-            org.mockito.internal.util.Timer timer1 = new org.mockito.internal.util.Timer((long) (-1));
-            org.junit.Assert.fail("Expected exception of type org.mockito.exceptions.misusing.FriendlyReminderException; message: \n\nDon't panic! I'm just a friendly reminder!\nIt is impossible for time to go backward, therefore...\nYou cannot put negative value of duration: (-1)\nas argument of timer methods (after(), timeout())\n");
-        } catch (org.mockito.exceptions.misusing.FriendlyReminderException e) {
-        }
-    }
-
-    @Test
-    public void test474() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test474");
-        org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
-        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
-        org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
-        java.lang.Thread thread4 = strWeakConcurrentSet1.getCleanerThread();
-        boolean boolean6 = strWeakConcurrentSet1.add("");
-        boolean boolean8 = strWeakConcurrentSet1.contains("class org.mockito.internal.util.concurrent.WeakConcurrentMap");
-        org.mockito.internal.util.reflection.FieldInitializationReport fieldInitializationReport11 = new org.mockito.internal.util.reflection.FieldInitializationReport((java.lang.Object) boolean8, false, false);
-        java.lang.Class<?> wildcardClass12 = fieldInitializationReport11.fieldClass();
-        boolean boolean13 = fieldInitializationReport11.fieldWasInitialized();
-        org.junit.Assert.assertTrue("'" + cleaner0 + "' != '" + org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE + "'", cleaner0.equals(org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE));
-        org.junit.Assert.assertNotNull(strWeakConcurrentSet3);
-        org.junit.Assert.assertNull(thread4);
-        org.junit.Assert.assertTrue("'" + boolean6 + "' != '" + true + "'", boolean6 == true);
-        org.junit.Assert.assertTrue("'" + boolean8 + "' != '" + false + "'", boolean8 == false);
-        org.junit.Assert.assertNotNull(wildcardClass12);
-        org.junit.Assert.assertTrue("'" + boolean13 + "' != '" + false + "'", boolean13 == false);
-    }
+    } 
 }
 

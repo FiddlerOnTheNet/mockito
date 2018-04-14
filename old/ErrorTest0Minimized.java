@@ -6,7 +6,7 @@ import org.junit.runners.MethodSorters;
 public class ErrorTest0Minimized {
 
     public static boolean debug = false;
-
+/*
     @Test
     public void test01() throws Throwable {
         java.util.LinkedHashSet<java.lang.Object> objSet28 = new java.util.LinkedHashSet<java.lang.Object>();
@@ -27,14 +27,14 @@ public class ErrorTest0Minimized {
         org.mockito.internal.util.collections.HashCodeAndEqualsSafeSet hashCodeAndEqualsSafeSet28 = org.mockito.internal.util.collections.HashCodeAndEqualsSafeSet.of((java.lang.Iterable<java.lang.Object>) objSet25);
         org.junit.Assert.assertTrue("Contract failed: equals-symmetric on objSet25 and hashCodeAndEqualsSafeSet28.", objSet25.equals(hashCodeAndEqualsSafeSet28) == hashCodeAndEqualsSafeSet28.equals(objSet25));
     }
-
+*/
     @Test
     public void test04() throws Throwable {
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet1 = new org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String>(cleaner0);
         strWeakConcurrentSet1.remove("");
     }
-
+/*
     @Test
     public void test05() throws Throwable {
         org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner cleaner0 = org.mockito.internal.util.concurrent.WeakConcurrentSet.Cleaner.INLINE;
@@ -248,5 +248,5 @@ public class ErrorTest0Minimized {
         org.mockito.internal.util.concurrent.WeakConcurrentSet<java.lang.String> strWeakConcurrentSet3 = org.mockito.internal.util.Checks.checkNotNull(strWeakConcurrentSet1, "");
         strWeakConcurrentSet3.expungeStaleEntries();
         boolean boolean6 = strWeakConcurrentSet3.remove("<custom argument matcher><[]>null");
-    }
-}
+    }  */
+} 

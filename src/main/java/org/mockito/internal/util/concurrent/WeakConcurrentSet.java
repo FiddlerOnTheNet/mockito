@@ -53,6 +53,9 @@ public class WeakConcurrentSet<V> implements Runnable, Iterable<V> {
      * @return {@code true} if the value is contained in the set.
      */
     public boolean remove(V value) {
+    	if (target == null) {
+    		System.err.println("TARGET IS NULL!!!");
+    	}
         return target.remove(value);
     }
 
